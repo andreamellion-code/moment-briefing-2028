@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+<title>03 · MOOD Personas · MOMENT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="deck-body">
+
+<nav class="top-nav">
+  <a href="index.html" class="home-link">Back to hub</a>
+  <span><strong style="color:var(--gold-400)">03</strong> · MOOD · cabin entertainment <span style="opacity:0.5; margin-left: 14px;">↓ details · → next · wheel scroll</span></span>
+</nav>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C9A961"/><stop offset="100%" stop-color="#0F2440"/></linearGradient>
+    <linearGradient id="g-navy" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#264E89"/><stop offset="100%" stop-color="#0A1A30"/></linearGradient>
+
+    <symbol id="i-sync" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="i-baby" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M9 9h.01"/><path d="M15 9h.01"/><path d="M10 13c1 1 3 1 4 0"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/></symbol>
+    <symbol id="i-shop" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8L20 12l-6.1 1.9L12 21l-1.9-7.1L4 12l6.1-1.9L12 3z"/></symbol>
+    <symbol id="i-diamond" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M6 16V8a6 6 0 0 1 12 0"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></symbol>
+    <symbol id="i-lang" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h4"/><path d="M7 6v8"/><path d="M14 14h3"/><path d="M15 8l1 6"/><path d="M21 14l-1-2-1 2"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="3" x2="3" y2="21"/><line x1="3" y1="21" x2="21" y2="21"/><rect x="7" y="13" width="3" height="6"/><rect x="12" y="8" width="3" height="11"/></symbol>
+  </defs>
+</svg>
+
+<div class="deck-shell">
+
+    <!-- ===== 1. TITLE ===== -->
+    <section class="canvas">
+      <div class="bg-photo" style="background-image: url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=2400&q=80')"></div>
+      <div class="center-stage airy">
+        <span class="slide-kicker">Briefing 03 · MOOD · onboard entertainment</span>
+        <h1 class="slide-title">Five personas<br><em>for the cabin</em></h1>
+        <p class="slide-sub">From cosmopolitan leisure to the back-office admin.</p>
+      </div>
+      <span class="has-down">Overview</span>
+    </section>
+
+    <!-- ===== 2. OVERVIEW — sommaire intuitif ===== -->
+    <section class="canvas">
+      <div class="bg-photo deep" style="background-image: url('https://images.unsplash.com/photo-1583416750470-965b2707b355?w=2400&q=80')"></div>
+      <div class="overview-pro">
+        <div class="op-header">
+          <h2>Briefing 03 · <em>MOOD onboard entertainment</em></h2>
+          <span class="op-hint">click any card to jump</span>
+        </div>
+
+        <div class="op-grid">
+
+          <div class="op-section">Introduction</div>
+          <a class="op-card featured" href="#/0">
+            <div class="op-pict"><svg class="icon"><use href="#i-play"/></svg></div>
+            <span class="op-num">01</span>
+            <h3 class="op-title">MOOD briefing<em>5 personas · 65% value</em></h3>
+            <span class="op-tag">Title</span>
+          </a>
+
+          <div class="op-section">5 personas · hero + deep-dive</div>
+          <a class="op-card persona" href="#/2">
+            <div class="op-avatar">L&amp;T</div>
+            <span class="op-num">03</span>
+            <h3 class="op-title">Léa &amp; Tomás<em>Cosmopolitan long-haul</em></h3>
+            <span class="op-tag">Hero</span>
+          </a>
+          <a class="op-card" href="#/3">
+            <div class="op-pict"><svg class="icon"><use href="#i-zap"/></svg></div>
+            <span class="op-num">04</span>
+            <h3 class="op-title">Léa &amp; Tomás · deep-dive<em>Mode switcher · activation</em></h3>
+            <span class="op-tag">Deep-dive</span>
+          </a>
+          <a class="op-card persona" href="#/4">
+            <div class="op-avatar">ML</div>
+            <span class="op-num">05</span>
+            <h3 class="op-title">Mei Lin / Wang Mei<em>Asian HNW · 27% value</em></h3>
+            <span class="op-tag">Hero</span>
+          </a>
+          <a class="op-card" href="#/5">
+            <div class="op-pict"><svg class="icon"><use href="#i-crown"/></svg></div>
+            <span class="op-num">06</span>
+            <h3 class="op-title">Mei Lin · deep-dive<em>3 records · Mandarin gap</em></h3>
+            <span class="op-tag">Deep-dive</span>
+          </a>
+          <a class="op-card persona" href="#/6">
+            <div class="op-avatar">H</div>
+            <span class="op-num">07</span>
+            <h3 class="op-title">Hiroshi / Pierre<em>Business work cycle</em></h3>
+            <span class="op-tag">Hero</span>
+          </a>
+          <a class="op-card" href="#/7">
+            <div class="op-pict"><svg class="icon"><use href="#i-sync"/></svg></div>
+            <span class="op-num">08</span>
+            <h3 class="op-title">Hiroshi · deep-dive<em>Work / Rest / Recharge</em></h3>
+            <span class="op-tag">Deep-dive</span>
+          </a>
+          <a class="op-card persona" href="#/8">
+            <div class="op-avatar">M&amp;H</div>
+            <span class="op-num">09</span>
+            <h3 class="op-title">Marc &amp; Hélène<em>Anxious EU · senior</em></h3>
+            <span class="op-tag">Hero</span>
+          </a>
+          <a class="op-card" href="#/9">
+            <div class="op-pict"><svg class="icon"><use href="#i-shield"/></svg></div>
+            <span class="op-num">10</span>
+            <h3 class="op-title">Marc &amp; Hélène · deep-dive<em>21% trips · reassurance</em></h3>
+            <span class="op-tag">Deep-dive</span>
+          </a>
+          <a class="op-card persona" href="#/10">
+            <div class="op-avatar">S</div>
+            <span class="op-num">11</span>
+            <h3 class="op-title">Sophie<em>B2B admin · 10× / day</em></h3>
+            <span class="op-tag">Hero</span>
+          </a>
+          <a class="op-card" href="#/11">
+            <div class="op-pict"><svg class="icon"><use href="#i-layers"/></svg></div>
+            <span class="op-num">12</span>
+            <h3 class="op-title">Sophie · deep-dive<em>Content ops · CMS</em></h3>
+            <span class="op-tag">Deep-dive</span>
+          </a>
+
+          <div class="op-section">Synthesis</div>
+          <a class="op-card featured" href="#/12">
+            <div class="op-pict"><svg class="icon"><use href="#i-target"/></svg></div>
+            <span class="op-num">13</span>
+            <h3 class="op-title">Convergence<em>65% portfolio value</em></h3>
+            <span class="op-tag">Reveal</span>
+          </a>
+          <a class="op-card" href="#/13">
+            <div class="op-pict"><svg class="icon"><use href="#i-chart"/></svg></div>
+            <span class="op-num">14</span>
+            <h3 class="op-title">Eleven opportunities<em>All ranked</em></h3>
+            <span class="op-tag">Matrix</span>
+          </a>
+          <a class="op-card" href="#/14">
+            <div class="op-pict"><svg class="icon"><use href="#i-alert"/></svg></div>
+            <span class="op-num">15</span>
+            <h3 class="op-title">Common pain points<em>8 cross-personas</em></h3>
+            <span class="op-tag">Pains</span>
+          </a>
+          <a class="op-card" href="#/15">
+            <div class="op-pict"><svg class="icon"><use href="#i-rocket"/></svg></div>
+            <span class="op-num">16</span>
+            <h3 class="op-title">End of briefing<em>Closing takeaway</em></h3>
+            <span class="op-tag">Closing</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         PERSONA 01 — LÉA & TOMÁS
+         ============================================ -->
+    <!-- HERO -->
+    <section class="canvas">
+        <div class="hero-portrait-full">
+          <div class="portrait-svg"><span class="ps-deco d1"></span><span class="ps-deco d2"></span><span class="ps-deco d3"></span><span class="ps-mono">L&amp;T</span><span class="ps-cap">Léa &amp; Tomás · DS #1</span></div>
+          <div class="photo with-fallback" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1600&q=80')"></div>
+          <div class="content">
+            <span class="slide-kicker">Persona 01 · DS #1 entertain me · partial DS #6</span>
+            <h1 class="display-name">Léa &amp; Tomás<em>The cosmopolitan long-haul couple.</em></h1>
+            <p class="verbatim-hero">Switching between movies, podcasts, games and a bit of sleep over 11 hours — in one click.<span class="author">— DS #1 cardinal verbatim</span></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMPACT DEEP-DIVE — 3 cols + stories row -->
+      <section class="canvas">
+        <div class="bg-photo deep" style="background-image: url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=2400&q=80')"></div>
+        <div class="detail-stage compact">
+          <div class="detail-header">
+            <h2>Léa &amp; Tomás · deep-dive</h2>
+            <span class="label">DS #1 · 12% trips · 17% value · 11h+ sessions · 40% premium · 45% kids</span>
+          </div>
+          <div class="detail-body">
+            <div class="deep-dive">
+              <div class="dd-main">
+
+                <!-- COL 1 · PROFILE -->
+                <div class="dd-col">
+                  <h4 class="col-h profile"><span class="dot"></span>Profile · DS #1 entertain me</h4>
+
+                  <p class="compact-verbatim">"Switch between activation and relaxation in one click."</p>
+
+                  <h5 class="sub-h">Identity</h5>
+                  <div class="facts">
+                    <div class="row"><span class="k">Couple</span><span class="v">32 yo · Korean film on seatback</span></div>
+                    <div class="row"><span class="k">Cabin</span><span class="v">60% Eco · <strong>40% premium</strong></span></div>
+                    <div class="row"><span class="k">Booking</span><span class="v">84% &gt; 1 month · planners</span></div>
+                    <div class="row"><span class="k">Household</span><span class="v">68% couples · <strong>45% kids</strong> (teens)</span></div>
+                    <div class="row"><span class="k">Tech</span><span class="v">Digital native · 79% high ed</span></div>
+                    <div class="row"><span class="k">Sessions</span><span class="v"><strong>11h+</strong> · 1-2× / year</span></div>
+                    <div class="row"><span class="k">FFP</span><span class="v">58% members</span></div>
+                  </div>
+
+                  <h5 class="sub-h">Geography</h5>
+                  <div class="geo-rich">
+                    <div class="row"><span class="iso">USA</span><span class="bar"><span style="transform:scaleX(.85)"></span></span><span class="v">17% <small>+70%</small></span></div>
+                    <div class="row"><span class="iso">JPN</span><span class="bar"><span style="transform:scaleX(.35)"></span></span><span class="v">7% <small>+133%</small></span></div>
+                    <div class="row"><span class="iso">KOR</span><span class="bar"><span style="transform:scaleX(.25)"></span></span><span class="v">5% <small>+66%</small></span></div>
+                    <div class="row"><span class="iso">FRA</span><span class="bar"><span style="transform:scaleX(.50)"></span></span><span class="v">10%</span></div>
+                  </div>
+
+                  <h5 class="sub-h">Onboard behavior</h5>
+                  <div class="behavior-bars">
+                    <div class="bb-row"><span class="lbl">Movies</span><span class="bar"><span style="transform:scaleX(.74)"></span></span><span class="v">74%</span></div>
+                    <div class="bb-row"><span class="lbl">Music</span><span class="bar"><span style="transform:scaleX(.69)"></span></span><span class="v">69%</span></div>
+                    <div class="bb-row"><span class="lbl">Flight radar</span><span class="bar"><span style="transform:scaleX(.67)"></span></span><span class="v">67%</span></div>
+                    <div class="bb-row"><span class="lbl">Own devices</span><span class="bar"><span style="transform:scaleX(.62)"></span></span><span class="v">62%</span></div>
+                    <div class="bb-row"><span class="lbl">Games</span><span class="bar"><span style="transform:scaleX(.50)"></span></span><span class="v">50%</span></div>
+                    <div class="bb-row"><span class="lbl">WiFi</span><span class="bar"><span style="transform:scaleX(.38)"></span></span><span class="v">38%</span></div>
+                    <div class="bb-row"><span class="lbl">IFE seatback</span><span class="bar"><span style="transform:scaleX(.36)"></span></span><span class="v">36%</span></div>
+                  </div>
+                </div>
+
+                <!-- COL 2 · GAINS -->
+                <div class="dd-col">
+                  <h4 class="col-h gain"><span class="dot"></span>Gains · 8 motivations</h4>
+                  <div class="icon-matrix gain cols-2">
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-sync"/></svg></div><div class="im-lbl">Mode switch</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-globe"/></svg></div><div class="im-lbl">Multicultural</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-sparkles"/></svg></div><div class="im-lbl">Novelties · classics</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-baby"/></svg></div><div class="im-lbl">Family zone</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-phone"/></svg></div><div class="im-lbl">Smooth BYOD</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-zap"/></svg></div><div class="im-lbl">Sound quality</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-route"/></svg></div><div class="im-lbl">Destination POI</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-shop"/></svg></div><div class="im-lbl">IFE→Shop</div></div>
+                  </div>
+                </div>
+
+                <!-- COL 3 · PAINS -->
+                <div class="dd-col">
+                  <h4 class="col-h pain"><span class="dot"></span>Pains · 8 frictions</h4>
+                  <div class="icon-matrix pain cols-2">
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-lang"/></svg></div><div class="im-lbl">No home language</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-sync"/></svg></div><div class="im-lbl">No mode switch</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-zap"/></svg></div><div class="im-lbl">Mediocre audio</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-monitor"/></svg></div><div class="im-lbl">Press too thin</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-eye"/></svg></div><div class="im-lbl">No reco engine</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-baby"/></svg></div><div class="im-lbl">No kids zone</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-phone"/></svg></div><div class="im-lbl">BYOD desync</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-shop"/></svg></div><div class="im-lbl">No shop CTA</div></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- STORIES ROW -->
+              <div class="dd-stories">
+                <div class="story-mini priority"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-sync"/></svg></div><span class="n">01</span></div><div class="txt"><strong>Mode Switcher</strong>Activation/Relaxation/Sleep/Wake-up</div></div>
+                <div class="story-mini"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-globe"/></svg></div><span class="n">02</span></div><div class="txt"><strong>Multicultural catalog</strong>FR · US · BR · JP · KR + EU</div></div>
+                <div class="story-mini"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-baby"/></svg></div><span class="n">03</span></div><div class="txt"><strong>Family Zone</strong>Teens · parental controls</div></div>
+                <div class="story-mini"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-phone"/></svg></div><span class="n">04</span></div><div class="txt"><strong>BYOD sync</strong>Favorites · language · resume</div></div>
+                <div class="story-mini"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-shop"/></svg></div><span class="n">05</span></div><div class="txt"><strong>Shop-now CTA</strong>From film → buy in MOOD</div></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- ============================================
+         PERSONA 02 — MEI LIN
+         ============================================ -->
+    <section class="canvas">
+        <div class="hero-portrait-full">
+          <div class="portrait-svg"><span class="ps-deco d1"></span><span class="ps-deco d2"></span><span class="ps-deco d3"></span><span class="ps-mono">ML</span><span class="ps-cap">Mei Lin · DS #3 + #9</span></div>
+          <div class="photo with-fallback" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1600&q=80')"></div>
+          <div class="content">
+            <span class="slide-kicker" style="color:var(--gold-300)">Persona 02 · DS #3 + #9 · highest ROI · 27% value record</span>
+            <h1 class="display-name">Mei Lin<em>The premium Asian HNW executive.</em></h1>
+            <p class="verbatim-hero">Why isn't my favorite film in Mandarin — and why doesn't MOOD recognize me after 5 years as top FFP?<span class="author">— DS #3 / #9 verbatim</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="canvas">
+        <div class="bg-photo deep" style="background-image: url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=2400&q=80')"></div>
+        <div class="detail-stage compact">
+          <div class="detail-header">
+            <h2>Mei Lin · deep-dive</h2>
+            <span class="label">DS #3 + #9 · 16% trips · <strong style="color:var(--gold-300)">27% value record</strong> · 100% last-minute · 38% top FFP</span>
+          </div>
+          <div class="detail-body">
+            <div class="deep-dive">
+              <div class="dd-main">
+
+                <div class="dd-col">
+                  <h4 class="col-h profile"><span class="dot"></span>Profile · highest ROI · 3 records</h4>
+
+                  <p class="compact-verbatim">"Mandarin subtitles? Recognition as top FFP?"</p>
+
+                  <h5 class="sub-h">Identity</h5>
+                  <div class="facts">
+                    <div class="row"><span class="k">Profile</span><span class="v">30-35 · Chinese · First class</span></div>
+                    <div class="row"><span class="k">Cabin</span><span class="v"><strong>67% premium DS#3</strong> · 57% DS#9</span></div>
+                    <div class="row"><span class="k">Booking</span><span class="v"><strong>100% &lt; 1 month DS#9</strong> · record</span></div>
+                    <div class="row"><span class="k">Household</span><span class="v">85% couples · <strong>68% kids · 21% parents</strong></span></div>
+                    <div class="row"><span class="k">Tech</span><span class="v">93% smartphone · smartwatch</span></div>
+                    <div class="row"><span class="k">Social</span><span class="v">Weibo · WeChat · Instagram</span></div>
+                    <div class="row"><span class="k">FFP</span><span class="v"><strong>38% top DS#9 / 39% DS#3</strong> record</span></div>
+                  </div>
+
+                  <h5 class="sub-h">Geography</h5>
+                  <div class="geo-rich">
+                    <div class="row"><span class="iso">CHN</span><span class="bar"><span style="transform:scaleX(1)"></span></span><span class="v">65% <small>+442%</small></span></div>
+                    <div class="row"><span class="iso">IND</span><span class="bar"><span style="transform:scaleX(.22)"></span></span><span class="v">12-15%</span></div>
+                    <div class="row"><span class="iso">BRA</span><span class="bar"><span style="transform:scaleX(.32)"></span></span><span class="v">13-23%</span></div>
+                    <div class="row"><span class="iso">USA</span><span class="bar"><span style="transform:scaleX(.20)"></span></span><span class="v">5-14%</span></div>
+                  </div>
+
+                  <h5 class="sub-h">Onboard behavior · DS #9 records</h5>
+                  <div class="behavior-bars">
+                    <div class="bb-row"><span class="lbl">Music DS#3</span><span class="bar"><span style="transform:scaleX(.87)"></span></span><span class="v">87%</span></div>
+                    <div class="bb-row"><span class="lbl">Movies</span><span class="bar"><span style="transform:scaleX(.85)"></span></span><span class="v">85%</span></div>
+                    <div class="bb-row"><span class="lbl">Music DS#9</span><span class="bar"><span style="transform:scaleX(.84)"></span></span><span class="v">84%</span></div>
+                    <div class="bb-row"><span class="lbl">Own devices</span><span class="bar"><span style="transform:scaleX(.83)"></span></span><span class="v">76-83%</span></div>
+                    <div class="bb-row"><span class="lbl">WiFi DS#3</span><span class="bar"><span style="transform:scaleX(.70)"></span></span><span class="v">70%</span></div>
+                    <div class="bb-row"><span class="lbl">IFE DS#9</span><span class="bar"><span style="transform:scaleX(.41)"></span></span><span class="v">41%</span></div>
+                  </div>
+                </div>
+
+                <div class="dd-col">
+                  <h4 class="col-h gain"><span class="dot"></span>Gains · 8 motivations</h4>
+                  <div class="icon-matrix gain cols-2">
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-crown"/></svg></div><div class="im-lbl">FFP recognition</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-lang"/></svg></div><div class="im-lbl">Mandarin catalog</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-zap"/></svg></div><div class="im-lbl">Premium audio</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-wifi"/></svg></div><div class="im-lbl">WiFi 70%</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-diamond"/></svg></div><div class="im-lbl">Shop-from-film</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-bell"/></svg></div><div class="im-lbl">Mobile push</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-sparkles"/></svg></div><div class="im-lbl">Wellness</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-grid"/></svg></div><div class="im-lbl">Premium games</div></div>
+                  </div>
+                </div>
+
+                <div class="dd-col">
+                  <h4 class="col-h pain"><span class="dot"></span>Pains · 8 frictions</h4>
+                  <div class="icon-matrix pain cols-2">
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-crown"/></svg></div><div class="im-lbl">Generic welcome</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-lang"/></svg></div><div class="im-lbl">No Mandarin</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-zap"/></svg></div><div class="im-lbl">No Hi-Fi</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-bell"/></svg></div><div class="im-lbl">No mobile push</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-wifi"/></svg></div><div class="im-lbl">No QoS WiFi</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-sync"/></svg></div><div class="im-lbl">No Crew sync</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-sparkles"/></svg></div><div class="im-lbl">No wellness</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-diamond"/></svg></div><div class="im-lbl">No shop bridge</div></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="dd-stories">
+                <div class="story-mini priority"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-crown"/></svg></div><span class="n">01</span></div><div class="txt"><strong>FFP welcome</strong>Name + status + reco · recognition</div></div>
+                <div class="story-mini priority"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-lang"/></svg></div><span class="n">02</span></div><div class="txt"><strong>Mandarin vertical</strong>CN films · audio · mags</div></div>
+                <div class="story-mini"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-sparkles"/></svg></div><span class="n">03</span></div><div class="txt"><strong>Wellness module</strong>Meditation · sleep aids · 12h flights</div></div>
+                <div class="story-mini"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-bell"/></svg></div><span class="n">04</span></div><div class="txt"><strong>Mobile push</strong>On-time · gate · cabin prep</div></div>
+                <div class="story-mini priority"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-diamond"/></svg></div><span class="n">05</span></div><div class="txt"><strong>Shop-from-film</strong>Alipay / WeChat CTA</div></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- ============================================
+         PERSONA 03 — HIROSHI / PIERRE
+         ============================================ -->
+    <section class="canvas">
+        <div class="hero-portrait-full">
+          <div class="portrait-svg"><span class="ps-deco d1"></span><span class="ps-deco d2"></span><span class="ps-deco d3"></span><span class="ps-mono">H</span><span class="ps-cap">Hiroshi · DS #4 + #8</span></div>
+          <div class="photo with-fallback" style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1600&q=80')"></div>
+          <div class="content">
+            <span class="slide-kicker">Persona 03 · DS #4 + #8 · ICA business</span>
+            <h1 class="display-name">Hiroshi /<br>Pierre<em>Work · Rest · Recharge cycle.</em></h1>
+            <p class="verbatim-hero">Close a deal over 6 hours, sleep 3, watch a film. MOOD must adapt to these 3 modes.<span class="author">— DS #4 cardinal verbatim</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="canvas">
+        <div class="bg-photo deep" style="background-image: url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=2400&q=80')"></div>
+        <div class="detail-stage compact">
+          <div class="detail-header">
+            <h2>Hiroshi / Lucas · deep-dive</h2>
+            <span class="label">DS #4 + #8 · 17% trips · 20% value · 93% smartphone record · 73% BYOD</span>
+          </div>
+          <div class="detail-body">
+            <div class="deep-dive">
+              <div class="dd-main">
+
+                <div class="dd-col">
+                  <h4 class="col-h profile"><span class="dot"></span>Profile · business cycle</h4>
+
+                  <p class="compact-verbatim">"Balance between work, rest and recharge."</p>
+
+                  <h5 class="sub-h">Identity</h5>
+                  <div class="facts">
+                    <div class="row"><span class="k">Profile</span><span class="v">38-42 · executive · Business class</span></div>
+                    <div class="row"><span class="k">Cabin</span><span class="v"><strong>55% premium DS#4 / 54% DS#8</strong></span></div>
+                    <div class="row"><span class="k">Booking</span><span class="v">64-69% &lt; 1 month · last-minute</span></div>
+                    <div class="row"><span class="k">Demo</span><span class="v">85/68% M · <strong>73-77% &lt; 45 years</strong></span></div>
+                    <div class="row"><span class="k">Tech</span><span class="v"><strong>93% smartphone</strong> DS#8 record</span></div>
+                    <div class="row"><span class="k">Frequency</span><span class="v">Multiple trips / month</span></div>
+                    <div class="row"><span class="k">FFP</span><span class="v"><strong>25-26% top + 26-29% mid = 51-55% loyal</strong></span></div>
+                  </div>
+
+                  <h5 class="sub-h">Geography · multi-continental</h5>
+                  <div class="geo-rich">
+                    <div class="row"><span class="iso">CHN</span><span class="bar"><span style="transform:scaleX(.95)"></span></span><span class="v">21% / 11%</span></div>
+                    <div class="row"><span class="iso">BRA</span><span class="bar"><span style="transform:scaleX(.86)"></span></span><span class="v">11-19%</span></div>
+                    <div class="row"><span class="iso">FRA</span><span class="bar"><span style="transform:scaleX(.78)"></span></span><span class="v">12-17%</span></div>
+                    <div class="row"><span class="iso">USA</span><span class="bar"><span style="transform:scaleX(.60)"></span></span><span class="v">13%</span></div>
+                    <div class="row"><span class="iso">JPN</span><span class="bar"><span style="transform:scaleX(.47)"></span></span><span class="v">10%</span></div>
+                  </div>
+
+                  <h5 class="sub-h">Onboard behavior</h5>
+                  <div class="behavior-bars">
+                    <div class="bb-row"><span class="lbl">Movies DS#4</span><span class="bar"><span style="transform:scaleX(.78)"></span></span><span class="v">78%</span></div>
+                    <div class="bb-row"><span class="lbl">Own devices</span><span class="bar"><span style="transform:scaleX(.73)"></span></span><span class="v">71-73%</span></div>
+                    <div class="bb-row"><span class="lbl">Sleep</span><span class="bar"><span style="transform:scaleX(.62)"></span></span><span class="v">62%</span></div>
+                    <div class="bb-row"><span class="lbl">Work</span><span class="bar"><span style="transform:scaleX(.56)"></span></span><span class="v">52-56%</span></div>
+                    <div class="bb-row"><span class="lbl">WiFi</span><span class="bar"><span style="transform:scaleX(.52)"></span></span><span class="v">50-52%</span></div>
+                    <div class="bb-row"><span class="lbl">IFE seatback</span><span class="bar"><span style="transform:scaleX(.29)"></span></span><span class="v">29%</span></div>
+                  </div>
+                </div>
+
+                <div class="dd-col">
+                  <h4 class="col-h gain"><span class="dot"></span>Gains · 7 motivations</h4>
+                  <div class="icon-matrix gain cols-2">
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-route"/></svg></div><div class="im-lbl">Work/Rest/Recharge</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-monitor"/></svg></div><div class="im-lbl">BYOD priority</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-chart"/></svg></div><div class="im-lbl">News + podcasts</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-moon"/></svg></div><div class="im-lbl">Sleep-aware</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-sparkles"/></svg></div><div class="im-lbl">Wellness</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-crown"/></svg></div><div class="im-lbl">Discreet FFP</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-lang"/></svg></div><div class="im-lbl">Multilingual</div></div>
+                  </div>
+                </div>
+
+                <div class="dd-col">
+                  <h4 class="col-h pain"><span class="dot"></span>Pains · 8 frictions</h4>
+                  <div class="icon-matrix pain cols-2">
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-route"/></svg></div><div class="im-lbl">No mode switch</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-moon"/></svg></div><div class="im-lbl">Not sleep-aware</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-sparkles"/></svg></div><div class="im-lbl">No wellness</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-monitor"/></svg></div><div class="im-lbl">BYOD desync</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-lang"/></svg></div><div class="im-lbl">CN/JP under-served</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-sync"/></svg></div><div class="im-lbl">No Crew sync</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-crown"/></svg></div><div class="im-lbl">No biz FFP</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-bell"/></svg></div><div class="im-lbl">No mobile info</div></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="dd-stories">
+                <div class="story-mini priority"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-route"/></svg></div><span class="n">01</span></div><div class="txt"><strong>Mode Switcher</strong>Work / Rest / Recharge</div></div>
+                <div class="story-mini priority"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-moon"/></svg></div><span class="n">02</span></div><div class="txt"><strong>Sleep-Aware mode</strong>Dim · low audio · Crew App</div></div>
+                <div class="story-mini"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-sparkles"/></svg></div><span class="n">03</span></div><div class="txt"><strong>Wellness module</strong>Meditation · breathing · stretching</div></div>
+                <div class="story-mini"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-monitor"/></svg></div><span class="n">04</span></div><div class="txt"><strong>BYOD sync</strong>Laptop ↔ phone ↔ seatback</div></div>
+                <div class="story-mini"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-crown"/></svg></div><span class="n">05</span></div><div class="txt"><strong>Discreet welcome</strong>Name + FFP · no gimmick</div></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- ============================================
+         PERSONA 04 — MARC & HÉLÈNE
+         ============================================ -->
+    <section class="canvas">
+        <div class="hero-portrait-full">
+          <div class="portrait-svg"><span class="ps-deco d1"></span><span class="ps-deco d2"></span><span class="ps-deco d3"></span><span class="ps-mono">M&amp;H</span><span class="ps-cap">Marc &amp; Hélène · DS #10 + #7 + #11</span></div>
+          <div class="photo with-fallback" style="background-image: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=1600&q=80')"></div>
+          <div class="content">
+            <span class="slide-kicker">Persona 04 · DS #10 · #7 · #11 · 100% cautious</span>
+            <h1 class="display-name">Marc &amp;<br>Hélène<em>The anxious European traveler.</em></h1>
+            <p class="verbatim-hero">If everything is going by plan, I can lean back and enjoy the journey.<span class="author">— DS #10 cardinal verbatim</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="canvas">
+        <div class="bg-photo deep" style="background-image: url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=2400&q=80')"></div>
+        <div class="detail-stage compact">
+          <div class="detail-header">
+            <h2>Marc &amp; Hélène · deep-dive</h2>
+            <span class="label">DS #10 · #7 · #11 · 21% trips · 13% value · 3% mobile record low · 127 min airport</span>
+          </div>
+          <div class="detail-body">
+            <div class="deep-dive">
+              <div class="dd-main">
+
+                <div class="dd-col">
+                  <h4 class="col-h profile"><span class="dot"></span>Profile · cautious cluster</h4>
+
+                  <p class="compact-verbatim">"If informed everything is fine, I can lean back."</p>
+
+                  <h5 class="sub-h">Identity</h5>
+                  <div class="facts">
+                    <div class="row"><span class="k">Profile</span><span class="v">55-65 · EU couple · blanket up</span></div>
+                    <div class="row"><span class="k">Pref</span><span class="v"><strong>Paper press</strong> (43% vs 7% digital)</span></div>
+                    <div class="row"><span class="k">Cabin</span><span class="v"><strong>86% Eco DS#10</strong> · 35% premium DS#7</span></div>
+                    <div class="row"><span class="k">Personality</span><span class="v"><strong>60% introverted · 81% discreet</strong> records</span></div>
+                    <div class="row"><span class="k">Tech</span><span class="v">96% web · <strong>3% mobile/app record low</strong></span></div>
+                    <div class="row"><span class="k">Airport</span><span class="v"><strong>110-127 min ICA record</strong></span></div>
+                    <div class="row"><span class="k">Frequency</span><span class="v">1-2 trips / year</span></div>
+                  </div>
+
+                  <h5 class="sub-h">Geography · 100% EU</h5>
+                  <div class="geo-rich">
+                    <div class="row"><span class="iso">FRA</span><span class="bar"><span style="transform:scaleX(1)"></span></span><span class="v">33-37%</span></div>
+                    <div class="row"><span class="iso">NLD</span><span class="bar"><span style="transform:scaleX(.43)"></span></span><span class="v">15-16%</span></div>
+                    <div class="row"><span class="iso">DEU</span><span class="bar"><span style="transform:scaleX(.35)"></span></span><span class="v">12-13%</span></div>
+                    <div class="row"><span class="iso">GBR</span><span class="bar"><span style="transform:scaleX(.34)"></span></span><span class="v">9-13%</span></div>
+                    <div class="row"><span class="iso">ITA</span><span class="bar"><span style="transform:scaleX(.24)"></span></span><span class="v">5-9%</span></div>
+                  </div>
+
+                  <h5 class="sub-h">Onboard behavior · low-tech</h5>
+                  <div class="behavior-bars">
+                    <div class="bb-row"><span class="lbl">Read</span><span class="bar"><span style="transform:scaleX(.67)"></span></span><span class="v">58-67%</span></div>
+                    <div class="bb-row"><span class="lbl">Sleep</span><span class="bar"><span style="transform:scaleX(.50)"></span></span><span class="v">22-50%</span></div>
+                    <div class="bb-row"><span class="lbl">Talk</span><span class="bar"><span style="transform:scaleX(.45)"></span></span><span class="v">0-45%</span></div>
+                    <div class="bb-row"><span class="lbl">IFE</span><span class="bar danger"><span style="transform:scaleX(.26)"></span></span><span class="v">11-26%</span></div>
+                    <div class="bb-row"><span class="lbl">WiFi</span><span class="bar danger"><span style="transform:scaleX(.09)"></span></span><span class="v">6-9%</span></div>
+                    <div class="bb-row"><span class="lbl">Mobile</span><span class="bar danger"><span style="transform:scaleX(.03)"></span></span><span class="v">3%</span></div>
+                  </div>
+                </div>
+
+                <div class="dd-col">
+                  <h4 class="col-h gain"><span class="dot"></span>Gains · 5 motivations</h4>
+                  <div class="icon-matrix gain cols-2">
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-shield"/></svg></div><div class="im-lbl">Soothing content</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-bell"/></svg></div><div class="im-lbl">Flight info</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-eye"/></svg></div><div class="im-lbl">Readable UX</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-moon"/></svg></div><div class="im-lbl">Sleep-aware</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-sync"/></svg></div><div class="im-lbl">Predictable</div></div>
+                  </div>
+
+                  <h4 class="col-h" style="color:var(--gold-400); margin-top:14px"><span class="dot"></span>Top 10 needs · DS #10</h4>
+                  <ol class="top-needs">
+                    <li>Total ticket price</li>
+                    <li>No extra fees</li>
+                    <li>Punctuality</li>
+                    <li>Cleanliness</li>
+                    <li>Seat comfort</li>
+                    <li>Helpful crew (#17)</li>
+                    <li>Flight status info</li>
+                    <li>Safety record</li>
+                    <li>Delays handling</li>
+                    <li>Cabin info</li>
+                  </ol>
+                </div>
+
+                <div class="dd-col">
+                  <h4 class="col-h pain"><span class="dot"></span>Pains · 7 frictions</h4>
+                  <div class="icon-matrix pain cols-2">
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-bell"/></svg></div><div class="im-lbl">No reassurance</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-eye"/></svg></div><div class="im-lbl">UX too dense</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-monitor"/></svg></div><div class="im-lbl">Press too thin</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-shield"/></svg></div><div class="im-lbl">No disruption help</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-zap"/></svg></div><div class="im-lbl">Sound aggressive</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-sync"/></svg></div><div class="im-lbl">No Crew sync</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-video"/></svg></div><div class="im-lbl">No pre-flight</div></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="dd-stories">
+                <div class="story-mini priority"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-bell"/></svg></div><span class="n">01</span></div><div class="txt"><strong>Reassurance notifs</strong>"On-time · everything is fine"</div></div>
+                <div class="story-mini priority"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-eye"/></svg></div><span class="n">02</span></div><div class="txt"><strong>Senior Accessibility</strong>Large text · contrast · simple nav</div></div>
+                <div class="story-mini priority"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-shield"/></svg></div><span class="n">03</span></div><div class="txt"><strong>Reassurance content</strong>Calm films · soft music · light docs</div></div>
+                <div class="story-mini"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-moon"/></svg></div><span class="n">04</span></div><div class="txt"><strong>Sleep-Aware + Crew</strong>Don't wake for non-critical</div></div>
+                <div class="story-mini"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-video"/></svg></div><span class="n">05</span></div><div class="txt"><strong>Pre-flight video</strong>Cabin · normal sounds</div></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- ============================================
+         PERSONA 05 — SOPHIE
+         ============================================ -->
+    <section class="canvas">
+        <div class="hero-portrait-full">
+          <div class="portrait-svg"><span class="ps-deco d1"></span><span class="ps-deco d2"></span><span class="ps-deco d3"></span><span class="ps-mono">S</span><span class="ps-cap">Sophie · B2B content admin</span></div>
+          <div class="photo with-fallback" style="background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&q=80')"></div>
+          <div class="content">
+            <span class="slide-kicker" style="color:var(--gold-300)">Persona 05 · B2B · platform &amp; media admin</span>
+            <h1 class="display-name">Sophie<em>The airline content admin · 10× / day.</em></h1>
+            <p class="verbatim-hero">Publish on 35 A350 by Friday — in 1 hour, not 2 days.<span class="author">— B2B scenario</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="canvas">
+        <div class="bg-photo deep" style="background-image: url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=2400&q=80')"></div>
+        <div class="detail-stage compact">
+          <div class="detail-header">
+            <h2>Sophie · deep-dive</h2>
+            <span class="label">B2B · platform &amp; media admin · 10× / day · 35 aircraft · 13 markets × 6 languages</span>
+          </div>
+          <div class="detail-body">
+            <div class="deep-dive">
+              <div class="dd-main">
+
+                <div class="dd-col">
+                  <h4 class="col-h profile"><span class="dot"></span>Profile · content ops</h4>
+
+                  <p class="compact-verbatim">"Publish on 35 A350 in 1 hour, not 2 days."</p>
+
+                  <h5 class="sub-h">Identity</h5>
+                  <div class="facts">
+                    <div class="row"><span class="k">Profile</span><span class="v">35 yo · CMS + dashboard + analytics</span></div>
+                    <div class="row"><span class="k">Environment</span><span class="v"><strong>Pro desktop</strong> · two hands</span></div>
+                    <div class="row"><span class="k">Role</span><span class="v">Content Ops · airline or Moment</span></div>
+                    <div class="row"><span class="k">Frequency</span><span class="v"><strong>10× per day</strong> (PAX 1-2× / year)</span></div>
+                    <div class="row"><span class="k">Tech</span><span class="v">Very comfortable · B2B tools</span></div>
+                  </div>
+
+                  <h5 class="sub-h">Scale</h5>
+                  <div class="behavior-bars">
+                    <div class="bb-row"><span class="lbl">Aircraft</span><span class="bar"><span style="transform:scaleX(1)"></span></span><span class="v">35</span></div>
+                    <div class="bb-row"><span class="lbl">Routes</span><span class="bar"><span style="transform:scaleX(.20)"></span></span><span class="v">3</span></div>
+                    <div class="bb-row"><span class="lbl">Languages</span><span class="bar"><span style="transform:scaleX(.40)"></span></span><span class="v">6</span></div>
+                    <div class="bb-row"><span class="lbl">Markets</span><span class="bar"><span style="transform:scaleX(.85)"></span></span><span class="v">13</span></div>
+                    <div class="bb-row"><span class="lbl">Combos</span><span class="bar"><span style="transform:scaleX(1)"></span></span><span class="v">78</span></div>
+                  </div>
+
+                  <h5 class="sub-h">Routes example</h5>
+                  <div class="facts">
+                    <div class="row"><span class="k">Paris-Beijing</span><span class="v"><strong>Mandarin vertical</strong></span></div>
+                    <div class="row"><span class="k">Paris-Tokyo</span><span class="v"><strong>JP vertical</strong></span></div>
+                    <div class="row"><span class="k">Paris-São Paulo</span><span class="v"><strong>BR PT vertical</strong></span></div>
+                  </div>
+
+                  <h5 class="sub-h">Business objectives</h5>
+                  <div class="chip-row">
+                    <span class="chip gold">ROI</span>
+                    <span class="chip gold">NPS</span>
+                    <span class="chip gold">Adserver rev</span>
+                    <span class="chip gold">Conversion</span>
+                  </div>
+                </div>
+
+                <div class="dd-col">
+                  <h4 class="col-h gain"><span class="dot"></span>Gains · 7 motivations</h4>
+                  <div class="icon-matrix gain cols-2">
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-zap"/></svg></div><div class="im-lbl">Bulk publish</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-grid"/></svg></div><div class="im-lbl">Route verticals</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-diamond"/></svg></div><div class="im-lbl">Cabin tiers</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-lang"/></svg></div><div class="im-lbl">Multilingual scale</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-chart"/></svg></div><div class="im-lbl">Track ROI</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-monitor"/></svg></div><div class="im-lbl">Adserver config</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-crown"/></svg></div><div class="im-lbl">Recognition orch.</div></div>
+                  </div>
+                </div>
+
+                <div class="dd-col">
+                  <h4 class="col-h pain"><span class="dot"></span>Pains · 7 frictions</h4>
+                  <div class="icon-matrix pain cols-2">
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-zap"/></svg></div><div class="im-lbl">Slow CMS</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-lang"/></svg></div><div class="im-lbl">Manual i18n</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-grid"/></svg></div><div class="im-lbl">No verticals</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-chart"/></svg></div><div class="im-lbl">BI silos</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-monitor"/></svg></div><div class="im-lbl">Adserver heavy</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-sync"/></svg></div><div class="im-lbl">No A/B</div></div>
+                    <div class="im-cell"><div class="im-ico"><svg class="icon"><use href="#i-route"/></svg></div><div class="im-lbl">Sync 24-48h</div></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="dd-stories">
+                <div class="story-mini priority"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-zap"/></svg></div><span class="n">01</span></div><div class="txt"><strong>Bulk publish</strong>35 A350 in 10 min · templates</div></div>
+                <div class="story-mini priority"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-grid"/></svg></div><span class="n">02</span></div><div class="txt"><strong>1-click verticals</strong>Mandarin · BR PT · Senior EU</div></div>
+                <div class="story-mini"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-lang"/></svg></div><span class="n">03</span></div><div class="txt"><strong>Auto translate</strong>6 langs · human review</div></div>
+                <div class="story-mini"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-monitor"/></svg></div><span class="n">04</span></div><div class="txt"><strong>Cross dashboard</strong>MOOD + Mkpl + WiFi by DS</div></div>
+                <div class="story-mini"><div class="ico-row"><div class="ico-c"><svg class="icon"><use href="#i-sync"/></svg></div><span class="n">05</span></div><div class="txt"><strong>A/B no-code</strong>Variant A vs B without dev</div></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- ===== CONVERGENCE REVEAL ===== -->
+    <section class="canvas">
+      <div class="bg-photo deep" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=2400&q=80')"></div>
+      <div class="center-stage airy">
+        <span class="slide-kicker">Cross-persona convergence</span>
+        <span class="mega">65<small>%</small></span>
+        <span class="mega-lbl">of portfolio value</span>
+        <p class="mega-cap">Multilingual catalog + recognition layer — 6 DS · 45% trips.</p>
+      </div>
+    </section>
+
+    <!-- ===== 11 OPPORTUNITIES — single compact slide ===== -->
+    <section class="canvas">
+      <div class="bg-photo deep" style="background-image: url('https://images.unsplash.com/photo-1583416750470-965b2707b355?w=2400&q=80')"></div>
+      <div class="detail-stage compact">
+        <div class="detail-header">
+          <h2>Eleven MOOD priority opportunities</h2>
+          <span class="label">Ranked by cross-persona convergence</span>
+        </div>
+        <div class="detail-body">
+          <div class="tile-row cols-4 airy" style="gap: 10px;">
+            <div class="feature-tile priority" style="padding: 14px 10px"><svg class="icon icon-lg"><use href="#i-lang"/></svg><h4>01 · Multilingual catalog</h4><p>6 DS · 45% / 65% value · record</p></div>
+            <div class="feature-tile priority" style="padding: 14px 10px"><svg class="icon icon-lg"><use href="#i-sync"/></svg><h4>02 · Mode Switcher</h4><p>Work/Rest · Activation/Sleep · Family</p></div>
+            <div class="feature-tile priority" style="padding: 14px 10px"><svg class="icon icon-lg"><use href="#i-crown"/></svg><h4>03 · Recognition Layer</h4><p>FFP welcome · DS#3·#5·#6·#8·#9</p></div>
+            <div class="feature-tile" style="padding: 14px 10px"><svg class="icon icon-lg"><use href="#i-sparkles"/></svg><h4>04 · Wellness Module</h4><p>Meditation · sleep aids · 5 DS</p></div>
+            <div class="feature-tile" style="padding: 14px 10px"><svg class="icon icon-lg"><use href="#i-moon"/></svg><h4>05 · Sleep-Aware UX</h4><p>Dim · Crew App · 5 DS</p></div>
+            <div class="feature-tile" style="padding: 14px 10px"><svg class="icon icon-lg"><use href="#i-shop"/></svg><h4>06 · MOOD ↔ Marketplace</h4><p>Shop-now CTA · DS#1·#3·#6·#9</p></div>
+            <div class="feature-tile" style="padding: 14px 10px"><svg class="icon icon-lg"><use href="#i-phone"/></svg><h4>07 · BYOD sync</h4><p>62-83% own devices</p></div>
+            <div class="feature-tile" style="padding: 14px 10px"><svg class="icon icon-lg"><use href="#i-grid"/></svg><h4>08 · CMS templates</h4><p>Route · auto-translate · A/B</p></div>
+            <div class="feature-tile" style="padding: 14px 10px"><svg class="icon icon-lg"><use href="#i-eye"/></svg><h4>09 · Senior Accessibility</h4><p>Large text · DS#5·#7·#10·#11</p></div>
+            <div class="feature-tile" style="padding: 14px 10px"><svg class="icon icon-lg"><use href="#i-chart"/></svg><h4>10 · Ad-supported Freemium</h4><p>DS#12·#13 · low-cost</p></div>
+            <div class="feature-tile priority" style="padding: 14px 10px; grid-column: span 2"><svg class="icon icon-lg"><use href="#i-shield"/></svg><h4>11 · Reassurance Content + Travel Info</h4><p>Calm films · seatback push · Marc &amp; Hélène 21% trips cautious cluster</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 8 COMMON PAIN POINTS ===== -->
+    <section class="canvas">
+      <div class="bg-photo deep" style="background-image: url('https://images.unsplash.com/photo-1583416750470-965b2707b355?w=2400&q=80')"></div>
+      <div class="detail-stage compact">
+        <div class="detail-header">
+          <h2>Eight common pain points</h2>
+          <span class="label">Across the 4 PAX personas</span>
+        </div>
+        <div class="detail-body">
+          <div class="dd-main" style="grid-template-columns: 1fr 1fr">
+            <div class="dd-col">
+              <div class="gp-rich pain">
+                <div class="item"><span class="marker">1</span><div class="body"><div class="ttl">No "Mode Switcher" on MOOD home</div><div class="desc">Activation/Relaxation/Sleep OR Work/Rest/Recharge — DS#1+#4+#5+#6+#8.</div></div></div>
+                <div class="item"><span class="marker">2</span><div class="body"><div class="ttl">Insufficient multilingual catalog</div><div class="desc">Mandarin · JP/KR/PT/HI · Nordic/IT.</div></div></div>
+                <div class="item"><span class="marker">3</span><div class="body"><div class="ttl">No top FFP Recognition Layer</div><div class="desc">Mei Lin DS#3/#9 · Hiroshi DS#8 · generic welcome.</div></div></div>
+                <div class="item"><span class="marker">4</span><div class="body"><div class="ttl">Sound quality + audio selection</div><div class="desc">Needs #92, #95, #101, #112, #114 · 4+ DS.</div></div></div>
+              </div>
+            </div>
+            <div class="dd-col">
+              <div class="gp-rich pain">
+                <div class="item"><span class="marker">5</span><div class="body"><div class="ttl">No Wellness Module</div><div class="desc">Meditation · sleep aids · breathwork · DS#3·#4·#5·#6·#9.</div></div></div>
+                <div class="item"><span class="marker">6</span><div class="body"><div class="ttl">No Sleep-Aware UX</div><div class="desc">Dim · low audio · DND · Crew App · DS#4·#5·#6·#7·#8.</div></div></div>
+                <div class="item"><span class="marker">7</span><div class="body"><div class="ttl">MOOD Light BYOD not synced</div><div class="desc">Universal · 62-83% own devices.</div></div></div>
+                <div class="item"><span class="marker">8</span><div class="body"><div class="ttl">MOOD ↔ Marketplace not integrated</div><div class="desc">Need #115/#116 onboard DF decoupled.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== END ===== -->
+    <section class="canvas">
+      <div class="bg-photo deep" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=2400&q=80')"></div>
+      <div class="center-stage airy quote-slide">
+        <blockquote>Five personas. One <strong>multilingual</strong> convergence.</blockquote>
+        <p class="slide-sub" style="margin-top: 40px;">— End of briefing 03 —</p>
+      </div>
+    </section>
+
+</div>
+
+<script src="assets/deck.js"></script>
+</body>
+</html>
