@@ -6764,3 +6764,301 @@ body.hub-v5 {
   margin-top: 6px !important;
 }
 
+
+
+/* ============================================================
+   MOMENT BRAND 2026 — Final override
+   Source: /Downloads/Template 2026.pptx (official brand template)
+   - Fonts: Poppins (display + body) · Montserrat (alt)
+   - Palette: brand blue / cyan / pink gradient on navy/white surfaces
+   - Logo motif: capsule shapes with cyan→pink gradient outlines
+   ============================================================ */
+
+:root {
+  /* Brand palette from Template 2026.pptx */
+  --moment-blue:      #5A88F1;
+  --moment-indigo:    #5151E5;
+  --moment-cyan:      #72EDF2;
+  --moment-sky:       #12ADDF;
+  --moment-aqua:      #00B0E5;
+  --moment-pink:      #FF0076;
+  --moment-magenta:   #E52A81;
+  --moment-deep:      #0A033B;
+  --moment-ink:       #010518;
+  --moment-bg-soft:   #F7F6F9;
+  --moment-text-soft: #7C8DB4;
+  --moment-line-soft: #A0B6E5;
+  --moment-cream:     #E7EBFA;
+
+  /* Re-map existing tokens to the MOMENT brand
+     so every component inherits the rebrand automatically */
+  --navy-900: var(--moment-ink);
+  --navy-800: var(--moment-deep);
+  --navy-700: #1A1850;
+  --navy-600: #2A2870;
+  --navy-500: var(--moment-indigo);
+  --navy-400: var(--moment-blue);
+
+  --gold-600: var(--moment-magenta);
+  --gold-500: var(--moment-blue);
+  --gold-400: var(--moment-cyan);
+  --gold-300: var(--moment-cyan);
+
+  --paper: #FFFFFF;
+  --paper-soft: var(--moment-bg-soft);
+  --ink-900: var(--moment-ink);
+  --ink-700: var(--moment-deep);
+  --ink-500: var(--moment-text-soft);
+  --ink-300: var(--moment-text-soft);
+  --line: rgba(160, 182, 229, 0.20);
+  --line-strong: rgba(90, 136, 241, 0.55);
+
+  --red: var(--moment-pink);
+  --red-air: var(--moment-pink);
+  --red-soft: rgba(255, 0, 118, 0.10);
+
+  /* Typography — switch to Poppins (display + body) and Montserrat (alt) */
+  --font-display: 'Poppins', 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Poppins', 'Montserrat', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Signature gradient (cyan → blue → magenta — the M logo) */
+  --moment-gradient: linear-gradient(135deg, var(--moment-cyan) 0%, var(--moment-blue) 50%, var(--moment-pink) 100%);
+  --moment-gradient-h: linear-gradient(90deg, var(--moment-cyan) 0%, var(--moment-blue) 50%, var(--moment-pink) 100%);
+}
+
+/* ---- Italic display titles: drop the serif italic, use SemiBold sans ---- */
+.reveal em,
+.reveal h1 em,
+.reveal h2 em,
+.reveal h3 em,
+.hub5-title em,
+.hub4-title em,
+.hc5-title em,
+.ddf-name em,
+.mc-title em,
+.slide-title em,
+.display-name em {
+  font-style: normal !important;
+  font-weight: 500 !important;
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+}
+
+/* Strong tags in titles get the same gradient treatment */
+.mc-title strong,
+.hub5-title strong,
+.hub4-title strong {
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  font-weight: 700 !important;
+}
+
+/* ---- Body background — radial brand gradient on deep indigo ---- */
+body.deck-body,
+.deck-shell {
+  background:
+    radial-gradient(ellipse 1000px 700px at 20% 0%, rgba(90, 136, 241, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 800px 600px at 80% 100%, rgba(255, 0, 118, 0.10) 0%, transparent 55%),
+    var(--moment-ink);
+}
+
+/* ---- Pill shape utility (the brand motif) ---- */
+.moment-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1.5px solid;
+  border-image: var(--moment-gradient-h) 1;
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* ---- Hub v5 cards — adopt brand gradient top stripe ---- */
+.hub5-card::before {
+  background: var(--moment-gradient-h) !important;
+}
+.hub5-card.featured::before {
+  background: var(--moment-gradient-h) !important;
+}
+.hub5-card:hover {
+  border-color: var(--moment-blue) !important;
+}
+.hub5-card.featured {
+  border-color: var(--moment-blue) !important;
+}
+.hc5-num,
+.hc5-figure,
+.hub5-card.featured .hc5-figure {
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+}
+.hc5-badge {
+  background: rgba(10, 3, 59, 0.78);
+  border-image: var(--moment-gradient-h) 1;
+  border-style: solid;
+  color: var(--moment-cyan);
+}
+
+/* ---- Hub5 background — bright accents instead of navy gold ---- */
+body.hub-v5 {
+  background: var(--moment-ink) !important;
+}
+.hub5-bg {
+  background:
+    radial-gradient(ellipse 900px 700px at 0% 0%, rgba(114, 237, 242, 0.10) 0%, transparent 55%),
+    radial-gradient(ellipse 1100px 800px at 100% 100%, rgba(255, 0, 118, 0.10) 0%, transparent 55%) !important;
+}
+
+/* ---- Deep dive bg overlay — adopt brand ink ---- */
+.bg-photo::after {
+  background: linear-gradient(135deg, rgba(1, 5, 24, 0.93) 0%, rgba(10, 3, 59, 0.85) 60%, rgba(1, 5, 24, 0.78) 100%) !important;
+}
+.bg-photo.deep::after {
+  background: radial-gradient(ellipse at center, rgba(10, 3, 59, 0.82) 0%, rgba(1, 5, 24, 0.97) 80%) !important;
+}
+
+/* ---- Slide-MC corporate — brand the action bar ---- */
+.slide-mc {
+  background: linear-gradient(180deg, var(--moment-ink) 0%, var(--moment-deep) 100%) !important;
+}
+.mc-action {
+  border-bottom-color: var(--moment-blue) !important;
+}
+.mc-action {
+  border-image: var(--moment-gradient-h) 1;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+
+/* ---- Icon-matrix gain/pain — brand colors ---- */
+.icon-matrix.gain .im-cell {
+  border-left: 2px solid var(--moment-cyan) !important;
+}
+.icon-matrix.gain .im-cell .im-ico {
+  color: var(--moment-cyan) !important;
+  border-color: var(--moment-cyan) !important;
+}
+.icon-matrix.pain .im-cell {
+  border-left: 2px solid var(--moment-pink) !important;
+  background: linear-gradient(90deg, rgba(255, 0, 118, 0.10) 0%, rgba(255, 255, 255, 0.025) 30%) !important;
+}
+.icon-matrix.pain .im-cell .im-ico {
+  color: var(--moment-pink) !important;
+  border-color: var(--moment-pink) !important;
+}
+.icon-matrix.pain .im-cell .im-lbl::before {
+  background: var(--moment-pink) !important;
+}
+
+/* ---- DD-focus persona layout — brand the verbatim accent ---- */
+.ddf-verbatim::before {
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.ddf-row.pain .ddf-tag {
+  background: linear-gradient(180deg, rgba(255, 0, 118, 0.16), rgba(255, 0, 118, 0.04));
+  color: var(--moment-pink);
+}
+.ddf-row.answer .ddf-tag {
+  background: linear-gradient(180deg, rgba(114, 237, 242, 0.18), rgba(114, 237, 242, 0.04));
+  color: var(--moment-cyan);
+}
+
+/* ---- Buttons & arrows ---- */
+.deck-arrows button {
+  border-image: var(--moment-gradient-h) 1;
+  color: var(--moment-cyan);
+}
+.deck-arrows button:hover:not(:disabled) {
+  background: rgba(114, 237, 242, 0.12);
+  color: white;
+}
+
+/* ---- Progress bar gradient ---- */
+.deck-progress .fill {
+  background: var(--moment-gradient-h) !important;
+}
+
+/* ---- Action lists numbering brand color ---- */
+.mc-block ol li::before {
+  color: var(--moment-blue) !important;
+}
+.mc-blockers ol li::before {
+  color: var(--moment-pink) !important;
+}
+.mc-blockers {
+  border-left-color: var(--moment-pink) !important;
+}
+.mc-actions {
+  border-left-color: var(--moment-cyan) !important;
+}
+.mc-actions h4 {
+  color: var(--moment-cyan) !important;
+}
+.mc-block ol li .when {
+  border-image: var(--moment-gradient-h) 1;
+  border-style: solid;
+  color: var(--moment-cyan);
+}
+
+/* ---- Headings hierarchy: Poppins weights ---- */
+.reveal h1,
+.hub5-title,
+.hub4-title,
+.ddf-name,
+.mc-title,
+.slide-title,
+.display-name {
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+}
+.reveal h2,
+.hc5-title,
+.section-title-pro h2 {
+  font-weight: 600 !important;
+  letter-spacing: -0.015em !important;
+}
+
+/* Numbers stay Poppins SemiBold instead of Cormorant italic */
+.hc5-figure,
+.ddf-kpi .v,
+.mc-stat .num,
+.tc-kpi .v,
+.kpi-giant .kg-num,
+.duration-mega .dm-num,
+.donut .d-inner .d-num,
+.mega,
+.ch-figure {
+  font-family: var(--font-display) !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.04em !important;
+}
+
+
+/* ---- MOMENT logo on the hub ---- */
+.hub5-logo {
+  display: block;
+  height: 56px;
+  width: auto;
+  margin: 0 auto 24px;
+}
+@media (max-width: 1100px) { .hub5-logo { height: 42px; margin-bottom: 16px; } }
+
