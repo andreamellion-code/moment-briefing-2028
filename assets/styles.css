@@ -8219,3 +8219,95 @@ body.hub-v5 {
   align-content: start;
 }
 
+
+
+/* ============================================================
+   FINAL BALANCE FIX — both blocks MUST be visually equal
+   ============================================================ */
+
+/* mc-body becomes a true grid with rows = 1fr so blocks stretch */
+.slide-mc .mc-body {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: 1fr !important;
+  align-items: stretch !important;
+  min-height: 0 !important;
+}
+
+/* For 4-tier slides with 4 columns, keep that */
+.slide-mc .mc-body.cols-4-tiers {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  grid-template-rows: 1fr !important;
+}
+.slide-mc .mc-body.cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-template-rows: 1fr !important;
+}
+
+/* mc-metrics: stat-grid genuinely fills via grid-template-rows 1fr */
+.slide-mc .mc-block.mc-metrics {
+  padding: 0 !important;
+  display: grid !important;
+  grid-template-rows: auto 1fr !important;
+}
+.slide-mc .mc-block.mc-metrics > h4 {
+  padding: clamp(20px, 2.2vw, 28px) clamp(22px, 2.4vw, 32px) 14px !important;
+}
+.slide-mc .mc-block.mc-metrics .mc-stat-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  border-top: 1px solid rgba(160, 182, 229, 0.15) !important;
+  height: 100%;
+  border-radius: 0;
+}
+
+/* Each mc-stat fills its grid cell vertically */
+.slide-mc .mc-stat {
+  display: grid !important;
+  grid-template-rows: 1fr auto auto !important;
+  padding: clamp(20px, 2.2vw, 30px) clamp(18px, 2vw, 26px) !important;
+  gap: 10px !important;
+  border-right: 1px solid rgba(160, 182, 229, 0.15);
+  background: rgba(255, 255, 255, 0.015);
+}
+.slide-mc .mc-stat:last-child {
+  border-right: none;
+}
+.slide-mc .mc-stat .num {
+  align-self: end;
+  margin-bottom: 4px;
+}
+.slide-mc .mc-stat .lbl {
+  align-self: start;
+}
+.slide-mc .mc-stat .ctx {
+  align-self: start;
+}
+
+/* Snapshot block — also fill height with dl spreading */
+.slide-mc .mc-block:first-child {
+  display: grid !important;
+  grid-template-rows: auto 1fr !important;
+}
+.slide-mc .mc-block:first-child .mc-kv {
+  align-content: space-around !important;
+  height: 100%;
+}
+
+/* mc-blockers / mc-actions ol: distribute items across full height */
+.slide-mc .mc-block.mc-blockers,
+.slide-mc .mc-block.mc-actions {
+  display: grid !important;
+  grid-template-rows: auto 1fr !important;
+}
+.slide-mc .mc-block.mc-blockers ol,
+.slide-mc .mc-block.mc-actions ol {
+  display: grid !important;
+  grid-template-rows: repeat(3, 1fr) !important;
+  align-content: stretch !important;
+}
+.slide-mc .mc-block.mc-blockers ol li,
+.slide-mc .mc-block.mc-actions ol li {
+  align-items: center !important;
+}
+
