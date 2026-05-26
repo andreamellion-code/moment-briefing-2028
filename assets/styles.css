@@ -8400,3 +8400,56 @@ body.hub-v5 {
   color: var(--moment-cyan) !important;
 }
 
+
+
+/* ============================================================
+   CENTER NUMBERS IN THEIR CELLS — base design fix
+   Override the previous align-self:end with proper centering.
+   ============================================================ */
+
+.slide-mc .mc-stat {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 10px !important;
+  padding: clamp(24px, 2.6vw, 36px) clamp(18px, 2vw, 26px) !important;
+  border-right: 1px solid rgba(160, 182, 229, 0.15);
+  background: rgba(255, 255, 255, 0.015);
+}
+.slide-mc .mc-stat:last-child {
+  border-right: none;
+}
+.slide-mc .mc-stat .num {
+  align-self: center !important;
+  margin: 0 !important;
+  text-align: center;
+}
+.slide-mc .mc-stat .lbl {
+  align-self: center !important;
+  text-align: center;
+  margin: 0 !important;
+}
+.slide-mc .mc-stat .ctx {
+  align-self: center !important;
+  text-align: center;
+  margin: 0 !important;
+}
+
+/* Hero stat - same centering, just bigger and gradient */
+.slide-mc .mc-stat.hero {
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+/* 4-tier slides (Connect commercial) — same centering treatment */
+.slide-mc .mc-body.cols-4-tiers .mc-block {
+  text-align: center;
+}
+.slide-mc .mc-body.cols-4-tiers .mc-kv {
+  justify-items: center;
+  text-align: center;
+}
+
