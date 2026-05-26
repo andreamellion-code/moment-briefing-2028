@@ -8311,3 +8311,92 @@ body.hub-v5 {
   align-items: center !important;
 }
 
+
+
+/* ============================================================
+   STATS REDESIGN — CEO-grade visual hierarchy
+   1 hero stat (60% width, 5.5rem) + 2 support stats (40% split)
+   The hero stat is the "$ at stake" — supports are market + signal.
+   ============================================================ */
+
+/* Override the 3-col equal grid with asymmetric layout */
+.slide-mc .mc-block.mc-metrics .mc-stat-grid {
+  display: grid !important;
+  grid-template-columns: 1.4fr 1fr 1fr !important;
+  height: 100%;
+  border-top: 1px solid rgba(160, 182, 229, 0.15) !important;
+}
+
+/* Hero stat — dominates visually */
+.slide-mc .mc-stat.hero {
+  background: linear-gradient(140deg, rgba(114, 237, 242, 0.15) 0%, rgba(81, 81, 229, 0.10) 50%, rgba(255, 0, 118, 0.08) 100%) !important;
+  border-right: 1px solid rgba(160, 182, 229, 0.20) !important;
+  position: relative;
+}
+/* HERO badge removed - visual hierarchy via size+gradient is enough */
+.slide-mc .mc-stat.hero .num {
+  font-size: clamp(3.6rem, 5.6vw, 5.8rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.05em !important;
+  line-height: 0.9 !important;
+}
+.slide-mc .mc-stat.hero .num small {
+  font-size: 0.34em !important;
+}
+.slide-mc .mc-stat.hero .lbl {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: var(--paper) !important;
+  margin-top: 8px !important;
+  line-height: 1.3 !important;
+}
+.slide-mc .mc-stat.hero .ctx {
+  font-size: 0.65rem !important;
+  letter-spacing: 0.24em !important;
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+}
+
+/* Support stats — smaller, plain white (no gradient) */
+.slide-mc .mc-stat:not(.hero) .num {
+  font-size: clamp(2.2rem, 3.2vw, 3.4rem) !important;
+  font-weight: 600 !important;
+  color: var(--paper) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--paper) !important;
+  letter-spacing: -0.04em !important;
+  line-height: 0.9 !important;
+}
+.slide-mc .mc-stat:not(.hero) .num small {
+  font-size: 0.38em !important;
+  color: var(--moment-text-soft) !important;
+  -webkit-text-fill-color: var(--moment-text-soft) !important;
+  font-weight: 500 !important;
+}
+.slide-mc .mc-stat:not(.hero) .lbl {
+  font-size: 0.82rem !important;
+  font-weight: 500 !important;
+  color: var(--moment-text-soft) !important;
+  line-height: 1.3 !important;
+}
+.slide-mc .mc-stat:not(.hero) .ctx {
+  font-size: 0.58rem !important;
+  letter-spacing: 0.22em !important;
+  color: var(--moment-text-soft) !important;
+  font-weight: 600 !important;
+}
+
+/* Hero number gets the gradient via override */
+.slide-mc .mc-stat.hero .num {
+  background: var(--moment-gradient-h) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+.slide-mc .mc-stat.hero .num small {
+  background: none !important;
+  -webkit-text-fill-color: var(--moment-cyan) !important;
+  color: var(--moment-cyan) !important;
+}
+
