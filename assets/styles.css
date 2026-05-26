@@ -8587,3 +8587,181 @@ body.hub-v5 {
   padding: 0 4px;
 }
 
+
+
+/* ============================================================
+   REVOLUTIONARY BETS slide — 2-card rich content layout
+   ============================================================ */
+
+.bet-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  align-self: stretch;
+  min-height: 0;
+}
+
+.bet-card {
+  background: linear-gradient(160deg, rgba(114, 237, 242, 0.06), rgba(255, 0, 118, 0.04) 100%);
+  border: 1px solid rgba(160, 182, 229, 0.20);
+  border-top: 3px solid;
+  border-image-source: var(--moment-gradient-h);
+  border-image-slice: 1;
+  border-radius: 4px;
+  padding: 22px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.bet-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bet-rank {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--moment-cyan);
+  font-weight: 700;
+}
+.bet-tag {
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--moment-text-soft);
+  font-weight: 600;
+  padding: 4px 10px;
+  border: 1px solid rgba(114, 237, 242, 0.3);
+  border-radius: 999px;
+}
+
+.bet-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  margin: 0;
+}
+
+.bet-sub {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--moment-cyan);
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+
+.bet-desc {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--paper);
+  margin: 0;
+  font-weight: 400;
+}
+.bet-desc strong {
+  color: var(--moment-cyan);
+  font-weight: 700;
+}
+
+.bet-outputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 4px 0;
+}
+.bet-output {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 2px solid var(--moment-cyan);
+  padding: 12px 14px;
+  border-radius: 0 3px 3px 0;
+}
+.bet-output:nth-child(2) {
+  border-left-color: var(--moment-pink);
+}
+.bet-out-tag {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--moment-cyan);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.bet-output:nth-child(2) .bet-out-tag {
+  color: var(--moment-pink);
+}
+.bet-output ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.bet-output li {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  line-height: 1.35;
+  color: var(--paper);
+  font-weight: 500;
+  padding-left: 12px;
+  position: relative;
+}
+.bet-output li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 7px;
+  width: 4px; height: 4px;
+  background: var(--moment-cyan);
+  border-radius: 50%;
+}
+.bet-output:nth-child(2) li::before {
+  background: var(--moment-pink);
+}
+
+.bet-foot {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(160, 182, 229, 0.18);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.bet-foot-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bet-foot-label {
+  font-family: var(--font-body);
+  font-size: 0.55rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--moment-cyan);
+  font-weight: 700;
+}
+.bet-foot-text {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: var(--moment-text-soft);
+  font-weight: 500;
+}
+
