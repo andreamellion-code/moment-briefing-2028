@@ -3351,14 +3351,16 @@ body.home-overview {
 .timeline-strip::before {
   content: "";
   position: absolute;
-  top: 110px; left: 6%; right: 6%;
+  /* Line passes through the dot center, BELOW the title */
+  top: 195px; left: 6%; right: 6%;
   height: 2px;
   background: linear-gradient(to right,
-    var(--gold-500) 0%,
-    var(--gold-400) 33%,
-    var(--paper) 66%,
-    rgba(255,255,255,0.35) 100%
+    var(--moment-cyan) 0%,
+    var(--moment-blue) 33%,
+    var(--moment-indigo) 66%,
+    var(--moment-pink) 100%
   );
+  z-index: 0;
 }
 .tl-row {
   display: grid;
@@ -3573,8 +3575,8 @@ body.home-overview {
 .icon-matrix.cols-3 { grid-template-columns: repeat(3, 1fr); }
 .icon-matrix.cols-4 { grid-template-columns: repeat(4, 1fr); }
 
-/* From the 5th cell onward, hide — force a TOP-4 max per matrix */
-.icon-matrix .im-cell:nth-child(n+5) { display: none; }
+/* Allow up to 8 cells per matrix */
+.icon-matrix .im-cell:nth-child(n+9) { display: none; }
 
 .im-cell {
   display: flex;
@@ -3606,8 +3608,15 @@ body.home-overview {
   letter-spacing: 0.01em;
 }
 
-/* Hide the stories row everywhere — redundant with gain/pain */
-.dd-stories { display: none !important; }
+/* Stories row — visible, grid layout for 5 persona stories */
+.dd-stories {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
 
 /* GAIN variant */
 .icon-matrix.gain .im-cell { border-left: 2px solid var(--gold-500); }
@@ -6702,38 +6711,24 @@ body.hub-v5 {
    No HTML changes required — pure CSS caps.
    ============================================================ */
 
-/* Cap identity facts at 4 (the most strategic) */
-.dd-col .facts .row:nth-child(n+5) {
+/* Cap identity facts at 7 (allow more source data) */
+.dd-col .facts .row:nth-child(n+8) {
   display: none;
 }
 
-/* Cap geography bars at 3 (top countries only) */
-.dd-col .geo-rich .row:nth-child(n+4) {
+/* Cap geography bars at 6 (allow more countries) */
+.dd-col .geo-rich .row:nth-child(n+7) {
   display: none;
 }
 
-/* Cap behavior bars at 4 (most differentiating) */
-.dd-col .behavior-bars .bb-row:nth-child(n+5) {
+/* Cap behavior bars at 7 (allow more differentiators) */
+.dd-col .behavior-bars .bb-row:nth-child(n+8) {
   display: none;
 }
 
-/* Hide secondary blocks that bloat the profile column */
-.dd-col .compact-verbatim {
-  display: none !important;
-}
-.dd-col .top-needs {
-  display: none !important;
-}
-.dd-col .chips-row,
-.dd-col .chip-row,
-.dd-col .objectives-chips {
-  display: none !important;
-}
-
-/* For personas with a Top-10 needs list (ol.top-needs), hide too */
-.dd-col ol.top-needs {
-  display: none !important;
-}
+/* Reverted: secondary blocks (compact-verbatim, top-needs, chips, ol.top-needs)
+   are now visible so the persona's signature quote and supplementary lists/chips
+   reappear above the identity block. */
 
 /* If a duration-mega is still present in a deep-dive (Bernard & Anne,
    Marc & Hélène), let it stay but more compact so the profile fits */
@@ -7061,4 +7056,1166 @@ body.hub-v5 {
   margin: 0 auto 24px;
 }
 @media (max-width: 1100px) { .hub5-logo { height: 42px; margin-bottom: 16px; } }
+
+/* Restore visibility — keep components compact but readable */
+.dd-col .compact-verbatim {
+  font-size: clamp(0.78rem, 0.95vw, 0.95rem) !important;
+  padding: 10px 14px !important;
+  margin-bottom: 10px !important;
+  background: rgba(255,255,255,0.025);
+  border-left: 2px solid var(--moment-cyan);
+  font-style: italic;
+  color: var(--paper);
+}
+.dd-stories .story-mini {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--moment-cyan);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-radius: 3px;
+}
+.dd-stories .story-mini.priority {
+  border-left-color: var(--moment-pink);
+  background: linear-gradient(90deg, rgba(255,0,118,0.06) 0%, rgba(255,255,255,0.03) 50%);
+}
+.dd-stories .story-mini .ico-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dd-stories .story-mini .ico-c {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--moment-cyan);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--moment-cyan);
+}
+.dd-stories .story-mini.priority .ico-c {
+  color: var(--moment-pink);
+  border-color: var(--moment-pink);
+}
+.dd-stories .story-mini .ico-c .icon { width: 14px; height: 14px; stroke-width: 1.6; }
+.dd-stories .story-mini .n {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.75rem;
+  color: var(--moment-cyan);
+}
+.dd-stories .story-mini.priority .n { color: var(--moment-pink); }
+.dd-stories .story-mini .txt {
+  font-size: 0.72rem;
+  color: var(--paper);
+  line-height: 1.35;
+  font-weight: 500;
+}
+.dd-stories .story-mini .txt strong {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--paper);
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+
+
+/* 4-tier strategy split slides — 4-column body */
+.mc-body.cols-4-tiers {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: auto;
+  gap: 14px;
+}
+
+
+/* ============================================================
+   FINAL COSMETIC POLISH — CEO-grade corporate presentation
+   Applied 2026-05-26. Targets all slide variants.
+   ============================================================ */
+
+/* ---------- 1 · Action title hierarchy · the "verdict" must read first ---------- */
+.slide-mc .mc-title {
+  font-size: clamp(1.5rem, 2.1vw, 2.3rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.012em !important;
+  max-width: 1400px;
+  color: var(--paper);
+}
+.slide-mc .mc-label {
+  font-size: 0.65rem !important;
+  letter-spacing: 0.36em !important;
+  color: var(--moment-cyan) !important;
+  opacity: 0.85;
+  padding: 4px 12px;
+  border: 1px solid rgba(114, 237, 242, 0.4);
+  border-radius: 999px;
+  align-self: flex-start;
+  background: rgba(114, 237, 242, 0.05);
+}
+.slide-mc .mc-action {
+  gap: 14px !important;
+  padding-bottom: 22px !important;
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(160, 182, 229, 0.3) !important;
+  border-image: none !important;
+}
+
+/* ---------- 2 · Numbers are heroes · bump mc-stat ---------- */
+.slide-mc .mc-stat {
+  padding: 24px 22px !important;
+  gap: 6px !important;
+}
+.slide-mc .mc-stat .num {
+  font-size: clamp(2.6rem, 4vw, 4.2rem) !important;
+  font-weight: 700 !important;
+  line-height: 0.88 !important;
+  letter-spacing: -0.04em !important;
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+}
+.slide-mc .mc-stat .num small {
+  font-size: 0.38em !important;
+  font-weight: 600 !important;
+  color: var(--moment-cyan) !important;
+  -webkit-text-fill-color: var(--moment-cyan);
+}
+.slide-mc .mc-stat.hero {
+  background: linear-gradient(140deg, rgba(114, 237, 242, 0.10) 0%, rgba(81, 81, 229, 0.08) 50%, rgba(255, 0, 118, 0.06) 100%) !important;
+  border-right-color: var(--moment-cyan) !important;
+}
+.slide-mc .mc-stat .lbl {
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  color: var(--paper) !important;
+  line-height: 1.3 !important;
+  margin-top: 6px !important;
+}
+.slide-mc .mc-stat .ctx {
+  font-size: 0.6rem !important;
+  letter-spacing: 0.22em !important;
+  color: var(--moment-cyan) !important;
+  font-weight: 600 !important;
+  margin-top: 4px !important;
+}
+
+/* ---------- 3 · mc-block visual rhythm · equal density ---------- */
+.slide-mc .mc-body {
+  gap: clamp(16px, 1.8vw, 24px) !important;
+}
+.slide-mc .mc-block {
+  background: rgba(255, 255, 255, 0.025) !important;
+  border: 1px solid rgba(160, 182, 229, 0.18) !important;
+  border-radius: 4px !important;
+  padding: clamp(22px, 2.4vw, 32px) !important;
+  position: relative;
+  overflow: hidden;
+}
+.slide-mc .mc-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 36px; height: 1px;
+  background: var(--moment-gradient-h);
+}
+.slide-mc .mc-block h4 {
+  font-size: 0.68rem !important;
+  letter-spacing: 0.32em !important;
+  font-weight: 700 !important;
+  margin-bottom: 18px !important;
+  padding-bottom: 12px !important;
+  color: var(--moment-cyan) !important;
+  border-bottom: 1px solid rgba(160, 182, 229, 0.15);
+}
+.slide-mc .mc-block.mc-blockers h4 { color: var(--moment-pink) !important; }
+.slide-mc .mc-block.mc-actions h4 { color: var(--moment-cyan) !important; }
+.slide-mc .mc-block.mc-blockers {
+  border-left: 2px solid var(--moment-pink) !important;
+}
+.slide-mc .mc-block.mc-actions {
+  border-left: 2px solid var(--moment-cyan) !important;
+}
+
+/* ---------- 4 · Snapshot dl · clear key/value hierarchy ---------- */
+.slide-mc .mc-kv {
+  grid-template-columns: 110px 1fr !important;
+  gap: 14px 18px !important;
+}
+.slide-mc .mc-kv dt {
+  font-size: 0.6rem !important;
+  letter-spacing: 0.22em !important;
+  font-weight: 700 !important;
+  color: var(--moment-cyan) !important;
+  text-transform: uppercase;
+  padding-top: 3px;
+}
+.slide-mc .mc-kv dd {
+  font-size: 0.92rem !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  color: var(--paper);
+}
+.slide-mc .mc-kv dd strong {
+  font-weight: 700 !important;
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+}
+
+/* ---------- 5 · Numbered ol · CEO-readable action list ---------- */
+.slide-mc .mc-block ol {
+  gap: 16px !important;
+}
+.slide-mc .mc-block ol li {
+  grid-template-columns: 32px 1fr auto !important;
+  gap: 18px !important;
+  font-size: 0.88rem !important;
+  line-height: 1.45 !important;
+  padding: 10px 0 !important;
+  border-bottom-color: rgba(160, 182, 229, 0.08) !important;
+  align-items: start;
+}
+.slide-mc .mc-block ol li::before {
+  font-size: 1.2rem !important;
+  font-style: italic !important;
+  font-weight: 700 !important;
+  font-family: var(--font-display) !important;
+  line-height: 1 !important;
+  letter-spacing: -0.02em;
+}
+.slide-mc .mc-block ol li strong {
+  display: block !important;
+  font-size: 0.96rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 4px !important;
+  color: var(--paper) !important;
+  line-height: 1.25;
+}
+.slide-mc .mc-block ol li span {
+  color: var(--moment-text-soft);
+  font-weight: 500;
+}
+
+/* ---------- 6 · When chips · commitment timestamps ---------- */
+.slide-mc .mc-block ol li .when {
+  font-size: 0.6rem !important;
+  letter-spacing: 0.22em !important;
+  font-weight: 700 !important;
+  padding: 6px 12px !important;
+  background: rgba(114, 237, 242, 0.10) !important;
+  border: 1px solid var(--moment-cyan) !important;
+  border-image: none !important;
+  color: var(--moment-cyan) !important;
+  border-radius: 999px;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+/* ---------- 7 · Source footer · branded, consistent ---------- */
+.slide-mc .mc-foot {
+  padding-top: 16px !important;
+  border-top: 1px solid rgba(160, 182, 229, 0.18) !important;
+  font-size: 0.62rem !important;
+  letter-spacing: 0.2em !important;
+}
+.slide-mc .mc-foot .src strong {
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  font-weight: 700 !important;
+}
+.slide-mc .mc-foot .page {
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.18em !important;
+}
+
+/* ---------- 8 · Hero portrait · bigger name + refined verbatim ---------- */
+.hero-portrait-full .content .display-name {
+  font-size: clamp(3.4rem, 5vw, 5.4rem) !important;
+  font-weight: 600 !important;
+  line-height: 0.95 !important;
+  letter-spacing: -0.025em !important;
+  margin-bottom: 14px !important;
+}
+.hero-portrait-full .content .display-name em {
+  font-size: 0.46em !important;
+  display: block !important;
+  margin-top: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.005em !important;
+  line-height: 1.25 !important;
+}
+.hero-portrait-full .content .verbatim-hero {
+  font-family: var(--font-display) !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-size: clamp(1.2rem, 1.5vw, 1.7rem) !important;
+  line-height: 1.35 !important;
+  color: var(--moment-cream) !important;
+  margin-top: 28px !important;
+  padding-left: 26px !important;
+  border-left: 2px solid;
+  border-image: var(--moment-gradient-h) 1;
+  position: relative;
+}
+.hero-portrait-full .content .verbatim-hero .author {
+  display: block !important;
+  font-family: var(--font-body) !important;
+  font-style: normal !important;
+  font-size: 0.55rem !important;
+  letter-spacing: 0.3em !important;
+  text-transform: uppercase !important;
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+  margin-top: 18px !important;
+}
+.hero-portrait-full .content .slide-kicker {
+  font-size: 0.65rem !important;
+  letter-spacing: 0.36em !important;
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+  padding: 5px 14px;
+  border: 1px solid rgba(114, 237, 242, 0.4);
+  border-radius: 999px;
+  display: inline-block;
+  background: rgba(114, 237, 242, 0.05);
+  align-self: flex-start;
+}
+
+/* ---------- 9 · Convergence / mega slides · MOMENT brand gradient ---------- */
+.mega {
+  background: var(--moment-gradient-h) !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.05em !important;
+  font-style: normal !important;
+}
+.mega-lbl {
+  color: var(--paper) !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.005em !important;
+  font-style: normal !important;
+}
+.mega-cap {
+  color: var(--moment-text-soft) !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+}
+
+/* ---------- 10 · Quote / end slides · subtle gradient accents ---------- */
+.quote-slide blockquote {
+  font-size: clamp(2.4rem, 3.6vw, 4rem) !important;
+  font-weight: 500 !important;
+  line-height: 1.15 !important;
+  color: var(--paper) !important;
+  font-family: var(--font-display) !important;
+  letter-spacing: -0.02em !important;
+}
+.quote-slide blockquote strong {
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  font-weight: 700 !important;
+}
+.quote-slide::before,
+.quote-slide::after {
+  background: var(--moment-gradient-h) !important;
+  opacity: 0.6 !important;
+  height: 2px !important;
+}
+
+/* ---------- 11 · Slide title (center-stage) · brand polish ---------- */
+.slide-title {
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.025em !important;
+  font-style: normal !important;
+}
+.slide-kicker {
+  font-size: 0.7rem !important;
+  letter-spacing: 0.36em !important;
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+}
+
+/* ---------- 12 · Stat triplet light (priority slides) ---------- */
+.stat-triplet.light .v {
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  font-weight: 700 !important;
+  font-family: var(--font-display) !important;
+  font-style: normal !important;
+}
+.stat-triplet.light .l {
+  color: var(--moment-cyan) !important;
+  letter-spacing: 0.22em !important;
+}
+
+/* ---------- 13 · Hub5 polish ---------- */
+.hub5-title {
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+}
+.hc5-figure {
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+.hc5-num {
+  background: var(--moment-gradient-h) !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+}
+.hub5-eyebrow {
+  background: rgba(114, 237, 242, 0.06);
+  color: var(--moment-cyan) !important;
+  border: 1px solid rgba(114, 237, 242, 0.3) !important;
+  font-weight: 700 !important;
+}
+.hc5-kicker {
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.32em !important;
+}
+
+/* ---------- 14 · Overview-pro polish ---------- */
+.overview-pro .op-header h2 {
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+.overview-pro .op-header .op-hint {
+  background: rgba(114, 237, 242, 0.08);
+  border: 1px solid rgba(114, 237, 242, 0.3);
+  border-radius: 999px;
+  padding: 6px 14px;
+  color: var(--moment-cyan) !important;
+}
+.op-card .op-num {
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+}
+.op-card .op-title {
+  font-family: var(--font-display) !important;
+  font-weight: 600 !important;
+}
+.op-card .op-tag {
+  color: var(--moment-cyan) !important;
+  background: rgba(114, 237, 242, 0.06);
+  border: 1px solid rgba(114, 237, 242, 0.25);
+}
+.op-card:hover {
+  border-color: var(--moment-cyan) !important;
+}
+.op-card:hover::before {
+  background: var(--moment-gradient-h) !important;
+}
+
+/* ---------- 15 · Trump cards polish ---------- */
+.trump-card .tc-name em {
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+}
+.tc-kpi .v {
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  font-weight: 700 !important;
+  font-family: var(--font-display) !important;
+  font-style: normal !important;
+}
+
+/* ---------- 16 · Timeline polish ---------- */
+.tl-phase .tl-horizon {
+  font-family: var(--font-display) !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+}
+.tl-phase .tl-when {
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+}
+.tl-phase .tl-chip {
+  border-color: rgba(114, 237, 242, 0.4) !important;
+  color: var(--moment-cream) !important;
+}
+
+/* ---------- 17 · Choice pyramid polish ---------- */
+.cp-row {
+  background: rgba(255, 255, 255, 0.025) !important;
+}
+.cp-row .cp-meta .v {
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+}
+.cp-note {
+  color: var(--moment-cyan) !important;
+  font-style: italic;
+}
+
+/* ---------- 18 · Final detail: action title contains key numbers wrapped <strong> ---------- */
+.slide-mc .mc-title strong,
+.slide-mc .mc-title em {
+  font-weight: 700 !important;
+  letter-spacing: -0.015em;
+}
+
+/* Section title pro polish */
+.section-title-pro h2 {
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+}
+.section-title-pro .st-kicker {
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+}
+
+
+
+/* ============================================================
+   CHROME SAFE ZONES — final layout fix
+   The top-nav (fixed, ~50px) and bottom chrome (progress bar +
+   counter at bottom:30 + arrows at bottom:22, ~80px) overlap
+   slide content. Force minimum top/bottom padding on every
+   layout shell so nothing collides.
+   ============================================================ */
+
+/* All slide layouts must clear: top ~70px (top-nav 50 + breathing 20),
+   bottom ~95px (progress 3 + counter ~38 + arrows ~42 + breathing 12) */
+
+.slide-mc {
+  padding-top: clamp(70px, 7vh, 110px) !important;
+  padding-bottom: clamp(95px, 9vh, 120px) !important;
+  padding-left: clamp(50px, 4.5vw, 90px) !important;
+  padding-right: clamp(50px, 4.5vw, 90px) !important;
+}
+
+.detail-stage,
+.detail-stage.compact {
+  padding-top: clamp(80px, 8vh, 120px) !important;
+  padding-bottom: clamp(95px, 9vh, 120px) !important;
+}
+
+.center-stage,
+.center-stage.airy {
+  padding-top: clamp(80px, 9vh, 130px) !important;
+  padding-bottom: clamp(95px, 9vh, 130px) !important;
+}
+
+.overview-pro {
+  padding-top: clamp(75px, 7vh, 110px) !important;
+  padding-bottom: clamp(95px, 9vh, 120px) !important;
+}
+
+.dd-focus {
+  padding-top: clamp(75px, 7vh, 110px) !important;
+  padding-bottom: clamp(95px, 9vh, 120px) !important;
+}
+
+/* Hero portrait full · content side needs the same clearance */
+.hero-portrait-full .content {
+  padding-top: clamp(75px, 8vh, 110px) !important;
+  padding-bottom: clamp(95px, 9vh, 130px) !important;
+}
+
+/* Make sure the deck-shell itself doesn't add another layer */
+.deck-shell {
+  inset: 0 !important;
+}
+
+/* z-index hierarchy so chrome (top-nav 60, counter/arrows 210, progress 200)
+   stays ABOVE slide content (5 for active canvas) */
+.top-nav {
+  z-index: 100 !important;
+  background: rgba(1, 5, 24, 0.92) !important;
+  border-bottom: 1px solid rgba(160, 182, 229, 0.20) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px);
+}
+.deck-progress {
+  z-index: 220 !important;
+}
+.deck-counter,
+.deck-arrows {
+  z-index: 230 !important;
+}
+
+/* Make bottom chrome a bit more visually integrated */
+.deck-counter {
+  background: rgba(1, 5, 24, 0.85) !important;
+  border-color: rgba(114, 237, 242, 0.3) !important;
+  backdrop-filter: blur(8px);
+  font-weight: 600 !important;
+  color: var(--moment-cyan) !important;
+}
+.deck-counter strong {
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  font-weight: 700 !important;
+  font-family: var(--font-display) !important;
+  font-style: italic !important;
+}
+.deck-arrows button {
+  background: rgba(1, 5, 24, 0.85) !important;
+  backdrop-filter: blur(8px);
+  border-color: rgba(114, 237, 242, 0.5) !important;
+  color: var(--moment-cyan) !important;
+}
+.deck-arrows button:hover:not(:disabled) {
+  background: rgba(114, 237, 242, 0.20) !important;
+  border-color: var(--moment-cyan) !important;
+}
+
+/* Top-nav typography polish */
+.top-nav,
+.top-nav a,
+.top-nav span {
+  font-family: var(--font-body) !important;
+  color: var(--moment-text-soft);
+}
+.top-nav a {
+  color: var(--moment-cyan) !important;
+  font-weight: 600;
+}
+.top-nav strong {
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  font-weight: 700 !important;
+}
+
+/* Overview-pro op-grid — leave room when scrollable for the bottom chrome */
+.overview-pro .op-grid {
+  padding-bottom: 24px;
+}
+
+
+
+/* ============================================================
+   MATRIX 2x2 — CEO-grade font sizes (was ridiculously small)
+   ============================================================ */
+
+.matrix-2x2 {
+  max-width: min(1400px, 92vw) !important;
+  height: clamp(420px, 56vh, 620px) !important;
+  margin: 24px auto !important;
+  gap: 14px;
+  grid-template-columns: 80px 1fr 1fr !important;
+  grid-template-rows: 1fr 1fr 60px !important;
+}
+
+.matrix-2x2 .m-axis-y,
+.matrix-2x2 .m-axis-x {
+  font-size: 0.72rem !important;
+  letter-spacing: 0.32em !important;
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+}
+
+.m-quad {
+  padding: 32px 36px !important;
+  gap: 18px !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(160, 182, 229, 0.20) !important;
+  border-radius: 4px !important;
+  position: relative;
+  overflow: hidden;
+}
+.m-quad::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 36px; height: 1px;
+  background: var(--moment-gradient-h);
+}
+
+.m-quad .m-corner {
+  position: absolute !important;
+  top: 22px !important;
+  right: 28px !important;
+  font-family: var(--font-display) !important;
+  font-style: italic !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+}
+
+.m-quad h5 {
+  font-family: var(--font-body) !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.28em !important;
+  text-transform: uppercase !important;
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+  margin: 0 0 4px !important;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(160, 182, 229, 0.15);
+}
+
+.m-quad ul {
+  gap: 12px !important;
+}
+.m-quad ul li {
+  font-size: 1rem !important;
+  line-height: 1.4 !important;
+  font-weight: 500 !important;
+  color: var(--paper) !important;
+  gap: 14px !important;
+  align-items: flex-start;
+}
+.m-quad ul li::before {
+  width: 7px !important;
+  height: 7px !important;
+  background: var(--moment-cyan) !important;
+  border-radius: 50% !important;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.m-quad.q-big-bet {
+  background: linear-gradient(160deg, rgba(114, 237, 242, 0.10), rgba(81, 81, 229, 0.04) 60%, transparent) !important;
+  border-color: var(--moment-cyan) !important;
+}
+.m-quad.q-big-bet::before {
+  height: 2px;
+}
+
+/* Section title pro at top of opportunities slide — bigger */
+.section-title-pro .st-kicker {
+  font-size: 0.75rem !important;
+  letter-spacing: 0.34em !important;
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+}
+.section-title-pro h2 {
+  font-size: clamp(1.6rem, 2.2vw, 2.4rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+.section-title-pro .st-r {
+  font-size: 0.92rem !important;
+  line-height: 1.45 !important;
+  color: var(--moment-text-soft) !important;
+  font-style: italic !important;
+  max-width: 380px !important;
+}
+
+
+
+/* ============================================================
+   FINAL READABILITY FIX — bump fonts on all remaining components
+   Targets: product-strip, trump-card, timeline-strip, choice-pyramid,
+   donut-row, decision-card, vision-radial
+   ============================================================ */
+
+/* Trump cards (new products + AF account) */
+.trump-card {
+  padding: 28px 28px 24px !important;
+}
+.trump-card .tc-rank {
+  font-size: 0.62rem !important;
+  letter-spacing: 0.28em !important;
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+}
+.trump-card.exploratory .tc-rank {
+  color: var(--moment-text-soft) !important;
+}
+.trump-card .tc-name {
+  font-size: clamp(1.2rem, 1.5vw, 1.6rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.15 !important;
+  margin-bottom: 18px !important;
+}
+.trump-card .tc-name em {
+  font-size: 0.62em !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  margin-top: 8px !important;
+  letter-spacing: 0 !important;
+  color: var(--moment-text-soft) !important;
+  -webkit-text-fill-color: var(--moment-text-soft) !important;
+  background: none !important;
+}
+.tc-kpi {
+  padding-top: 18px !important;
+  border-top-color: rgba(160, 182, 229, 0.18) !important;
+}
+.tc-kpi .v {
+  font-size: clamp(2rem, 2.6vw, 2.8rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+}
+.tc-kpi .v small {
+  font-size: 0.42em !important;
+  color: var(--moment-cyan) !important;
+  -webkit-text-fill-color: var(--moment-cyan) !important;
+  font-weight: 600 !important;
+}
+.tc-kpi .l {
+  font-size: 0.62rem !important;
+  letter-spacing: 0.22em !important;
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+}
+.tc-pict {
+  width: 44px !important;
+  height: 44px !important;
+  border-color: var(--moment-cyan) !important;
+  color: var(--moment-cyan) !important;
+}
+.tc-pict svg {
+  width: 22px !important;
+  height: 22px !important;
+}
+
+/* Timeline strip chips (roadmap) */
+.tl-phase .tl-when {
+  font-size: 0.6rem !important;
+  letter-spacing: 0.3em !important;
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+  margin-bottom: 20px !important;
+}
+.tl-phase .tl-horizon {
+  font-size: 1.6rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 24px !important;
+  line-height: 1.1 !important;
+}
+.tl-phase .tl-chip {
+  font-size: 0.72rem !important;
+  padding: 9px 16px !important;
+  letter-spacing: 0.03em !important;
+  font-weight: 500 !important;
+  border-color: rgba(114, 237, 242, 0.4) !important;
+  color: var(--paper) !important;
+  background: rgba(114, 237, 242, 0.05) !important;
+}
+.tl-phase.s1 .tl-chip {
+  border-color: var(--moment-cyan) !important;
+  color: var(--moment-cyan) !important;
+}
+.tl-phase .tl-count {
+  font-size: 0.95rem !important;
+  margin-top: 16px !important;
+  font-style: italic;
+  color: var(--moment-cyan) !important;
+  font-weight: 600 !important;
+}
+
+/* Choice pyramid (MOMENT pitch) */
+.cp-row .cp-label {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  font-family: var(--font-display) !important;
+}
+.cp-row .cp-meta .v {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+}
+.cp-row .cp-meta .l {
+  font-size: 0.6rem !important;
+  letter-spacing: 0.24em !important;
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+}
+.cp-row.covered::after {
+  font-size: 0.55rem !important;
+  letter-spacing: 0.24em !important;
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+}
+
+/* Product strip (3 products portfolio) */
+.ps-card {
+  padding: 32px 28px 28px !important;
+  gap: 16px !important;
+}
+.ps-card .ps-name {
+  font-size: 2.2rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+.ps-card .ps-tagline {
+  font-size: 0.7rem !important;
+  letter-spacing: 0.22em !important;
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+}
+.ps-card .ps-foot .ps-status {
+  font-size: 0.62rem !important;
+  letter-spacing: 0.24em !important;
+  font-weight: 700 !important;
+}
+.ps-card .kpi-giant.compact .kg-num {
+  font-size: 2rem !important;
+}
+.ps-card .kpi-giant .kg-num .unit {
+  font-size: 0.4em !important;
+}
+.ps-card .ps-pict {
+  width: 52px !important;
+  height: 52px !important;
+}
+.ps-card .ps-pict svg {
+  width: 26px !important;
+  height: 26px !important;
+}
+
+/* Maturity gauge (in product-strip) */
+.maturity-gauge .mg-dot {
+  width: 20px !important;
+  height: 20px !important;
+  border-color: var(--moment-cyan) !important;
+}
+.maturity-gauge .mg-dot.on {
+  background: var(--moment-cyan) !important;
+}
+.maturity-gauge.alert .mg-dot.on {
+  background: var(--moment-pink) !important;
+  border-color: var(--moment-pink) !important;
+}
+
+/* Coverage grid (slide 13 conseils, dots 7/13) */
+.coverage-grid {
+  max-width: 360px !important;
+  gap: 10px !important;
+}
+.cov-dot {
+  border-width: 2px !important;
+}
+.cov-dot.on {
+  background: var(--moment-cyan) !important;
+  border-color: var(--moment-cyan) !important;
+}
+
+/* Decision card (business pivots) */
+.decision-card {
+  padding: 32px 28px !important;
+}
+.decision-card .rank {
+  font-size: 0.62rem !important;
+  letter-spacing: 0.26em !important;
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+}
+.decision-card h3 {
+  font-size: 1.6rem !important;
+  font-weight: 600 !important;
+}
+.decision-card .num-big {
+  font-size: 4rem !important;
+  font-weight: 700 !important;
+  background: var(--moment-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  font-style: normal !important;
+}
+.decision-card .num-big small {
+  font-size: 0.4em !important;
+  color: var(--moment-cyan) !important;
+  -webkit-text-fill-color: var(--moment-cyan) !important;
+}
+.decision-card .kw {
+  font-size: 0.72rem !important;
+  letter-spacing: 0.04em !important;
+  color: var(--moment-text-soft) !important;
+}
+.decision-card .ico-circle-lg {
+  border-color: var(--moment-cyan) !important;
+  color: var(--moment-cyan) !important;
+}
+
+/* Donut row labels (priorities) */
+.donut-row .donut .d-inner .d-num {
+  font-weight: 700 !important;
+}
+.donut-row .donut .d-inner .d-lbl {
+  font-size: 0.65rem !important;
+  letter-spacing: 0.22em !important;
+  color: var(--moment-cyan) !important;
+  font-weight: 700 !important;
+}
+
+/* Vision radial satellites */
+.vision-radial .satellite .kw {
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  color: var(--paper) !important;
+}
+.vision-radial .satellite .ico {
+  border-color: var(--moment-cyan) !important;
+  color: var(--moment-cyan) !important;
+}
+.vision-radial .core .y {
+  font-size: 3rem !important;
+  font-weight: 700 !important;
+}
+.vision-radial .core .l {
+  font-size: 0.7rem !important;
+  letter-spacing: 0.28em !important;
+  color: var(--moment-cyan) !important;
+}
+
+/* Stat triplet (pitch, priorities mobile/multi/PSP) */
+.stat-triplet > div {
+  padding: 0 36px !important;
+}
+.stat-triplet .v {
+  font-size: clamp(3rem, 5vw, 5.5rem) !important;
+  font-weight: 700 !important;
+}
+.stat-triplet .l {
+  font-size: 0.72rem !important;
+  letter-spacing: 0.24em !important;
+  font-weight: 700 !important;
+}
+
+
+/* Timeline: ensure title clears the line (push title higher with extra margin
+   so the line passes THROUGH the dot, not through the title) */
+.tl-phase .tl-horizon {
+  min-height: 110px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 32px !important;
+}
+.tl-phase .tl-dot {
+  position: relative;
+  z-index: 2;
+  background: var(--moment-ink) !important;
+  border-color: var(--moment-cyan) !important;
+}
+.tl-phase .tl-dot::after {
+  background: var(--moment-cyan) !important;
+}
+.tl-phase.s2 .tl-dot { border-color: var(--moment-blue) !important; }
+.tl-phase.s2 .tl-dot::after { background: var(--moment-blue) !important; }
+.tl-phase.s3 .tl-dot { border-color: var(--moment-indigo) !important; }
+.tl-phase.s3 .tl-dot::after { background: var(--moment-indigo) !important; }
+.tl-phase.s4 .tl-dot { border-color: var(--moment-pink) !important; }
+.tl-phase.s4 .tl-dot::after { background: transparent !important; }
+
+
+
+/* ============================================================
+   BALANCE FIX — 2-block layouts (Slide A: snapshot + metrics)
+   Snapshot dl is naturally taller than 3-stat grid. Force the
+   metrics block to fill height so blocks are visually balanced.
+   ============================================================ */
+
+/* mc-body for 2-column layouts: stretch both blocks to equal height */
+.slide-mc .mc-body {
+  align-items: stretch !important;
+}
+.slide-mc .mc-block {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 0;
+}
+
+/* mc-metrics: let the stat grid grow vertically */
+.slide-mc .mc-block.mc-metrics {
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.slide-mc .mc-block.mc-metrics > h4 {
+  padding: clamp(22px, 2.4vw, 32px) clamp(22px, 2.4vw, 32px) 14px !important;
+  margin-bottom: 0 !important;
+}
+.slide-mc .mc-block.mc-metrics .mc-stat-grid {
+  flex: 1;
+  display: grid;
+  grid-template-rows: 1fr;
+  border-top: 1px solid rgba(160, 182, 229, 0.15) !important;
+}
+
+/* Each mc-stat distributes num / lbl / ctx across full block height */
+.slide-mc .mc-stat {
+  padding: clamp(22px, 2.4vw, 32px) clamp(18px, 2vw, 26px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+  min-height: 100%;
+}
+
+/* mc-blockers and mc-actions: also balance the height + spread ol items */
+.slide-mc .mc-block.mc-blockers,
+.slide-mc .mc-block.mc-actions {
+  display: flex !important;
+  flex-direction: column !important;
+}
+.slide-mc .mc-block.mc-blockers ol,
+.slide-mc .mc-block.mc-actions ol {
+  flex: 1;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-around !important;
+}
+
+/* Snapshot block: dl stays natural, but block height matches metrics */
+.slide-mc .mc-block:first-child .mc-kv {
+  flex: 1;
+  align-content: start;
+}
 
