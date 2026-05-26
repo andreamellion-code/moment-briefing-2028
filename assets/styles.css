@@ -8765,3 +8765,54 @@ body.hub-v5 {
   font-weight: 500;
 }
 
+
+
+/* ============================================================
+   FIX: blocks content touching footer / borders
+   Ensure breathing space between item rows AND between
+   blocks and the slide footer.
+   ============================================================ */
+
+/* Block internal padding bottom prevents content kissing border */
+.slide-mc .mc-block.mc-blockers,
+.slide-mc .mc-block.mc-actions {
+  padding: clamp(20px, 2.2vw, 28px) clamp(20px, 2.2vw, 28px) clamp(20px, 2.4vw, 28px) !important;
+}
+
+/* ol items: distribute with gap, not strict 1fr, to avoid overflow */
+.slide-mc .mc-block.mc-blockers ol,
+.slide-mc .mc-block.mc-actions ol {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-around !important;
+  gap: 12px !important;
+  height: 100%;
+  padding: 4px 0;
+}
+.slide-mc .mc-block.mc-blockers ol li,
+.slide-mc .mc-block.mc-actions ol li {
+  padding: 6px 0 !important;
+  border-bottom: none !important;
+}
+
+/* Add margin between body and footer so blocks don't kiss the footer */
+.slide-mc {
+  gap: clamp(20px, 2.5vh, 32px) !important;
+}
+.slide-mc .mc-foot {
+  margin-top: clamp(8px, 1vh, 16px) !important;
+}
+
+/* On smaller viewports, reduce the action title slightly so the body has more room */
+@media (max-height: 900px) {
+  .slide-mc .mc-title {
+    font-size: clamp(1.3rem, 1.8vw, 1.8rem) !important;
+  }
+  .slide-mc .mc-block ol li {
+    font-size: 0.82rem !important;
+  }
+  .slide-mc .mc-block ol li strong {
+    font-size: 0.88rem !important;
+  }
+}
+
