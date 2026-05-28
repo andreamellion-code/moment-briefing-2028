@@ -22,14 +22,19 @@
 
 ## 1. Introduction
 
-**Question :** comment MOMENT passe de fournisseur de modules cabine à plateforme de référence du voyage aérien d'ici 2028 ?
+**Qui est MOMENT ?** Un éditeur **B2B** de logiciels pour la mobilité. 3 produits :
+- **AIRFREE** → marketplace destinée aux **aéroports**
+- **CONNECT** → portail Wi-Fi destiné aux compagnies **aériennes et ferroviaires**
+- **MOOD** → divertissement à bord destiné aux compagnies **aériennes et ferroviaires**
+
+**Question :** comment MOMENT passe de fournisseur de modules à plateforme de référence de la mobilité d'ici 2028 ?
 
 **Réponse en trois temps :**
 - 3 priorités à exécuter en 12 mois → **65 % de la valeur portfolio**
 - 9 nouveaux produits à 36 mois → couverture 100 % des typologies
-- 2 paris de rupture → **Cabin Sense** (IA cabine) + **MOMENT Pass** (abonnement multi-compagnies)
+- 2 paris de rupture (tous **B2B**) → **Cabin Sense** (IA cabine air + rail) + **MOMENT Network** (couche d'orchestration multi-modale)
 
-**Vision 2028 :** opérateur de référence de l'expérience perçue dans le transport aérien.
+**Vision 2028 :** opérateur de référence de l'expérience perçue dans la mobilité (aéroports + air + rail).
 
 ---
 
@@ -114,19 +119,24 @@
 
 **3 exploratoires** (à revalider post-COVID) : Sustainability · Wellness Hub · Post-Trip Companion.
 
-### Les 2 paris de rupture
+### Les 2 paris de rupture (tous B2B)
 
-**Cabin Sense — couche IA embarquée**
+**Cabin Sense — couche IA embarquée (air + rail)**
 - Une seule techno (capteurs + détection d'état) → 2 produits commerciaux
 - Pour le passager → UI adaptative, notifications de réassurance, sleep-aware
-- Pour l'équipage → carte cabine temps réel, micro-attentions personnalisées
-- Revenue : licence par avion + modules premium + partenariats assureurs
+- Pour l'équipage / PNC / contrôleur → carte cabine temps réel, micro-attentions personnalisées
+- Vendu aux **compagnies aériennes ET ferroviaires** (Lufthansa, AF, KLM, Cathay · SNCF, Eurostar, DB, Renfe)
+- Revenue : licence par avion/rame + modules premium (anxiety · recognition · personalisation) + partenariats assureurs
 - Adresse 5 failles : anxieux (21 %), recognition gradient (2 % → 39 %), sleep-aware, disruption help, accessibilité senior
 
-**MOMENT Pass — abonnement multi-compagnies ("Spotify du vol")**
-- 19 €/mois → Wi-Fi illimité + lounges + IFE premium
-- 49 €/mois → + concierge + insurance auto
-- Disrupte les alliances : **le passager paie MOMENT, pas Air France**
+**MOMENT Network — couche d'orchestration multi-modale B2B**
+- Plateforme fédérée qui connecte aéroports + compagnies aériennes + opérateurs ferroviaires équipés MOMENT
+- Identité voyageur opt-in + préférences + tokens de paiement portables entre opérateurs
+- Le voyageur Eurostar est reconnu par KLM · le client AF est reconnu chez ADP AIRFREE · le passager SNCF retrouve son contenu MOOD sur Lufthansa
+- Vendu à **3 cibles B2B** : aéroports (ADP, Schiphol, Heathrow, AENA), aériens (AF, KLM, LH, Cathay…), ferroviaires (SNCF, Eurostar, DB, Renfe, Trenitalia, ÖBB)
+- Revenue : licence par traveler-ID/an + tier analytics cross-modal + premium SLA (recognition < 1 s) + revenue share sur flux cross-modaux
+- Effet réseau : chaque nouveau client augmente la valeur pour tous les autres
+- Disruption : remplace les alliances siloées (Star, OneWorld, SkyTeam) par un vrai réseau multi-modal · MOMENT devient le **« Stripe de la mobilité »**
 
 ### Roadmap
 
@@ -453,16 +463,18 @@ Marché atomisé (6 typologies max 19 %) → ni compromis, ni fragmentation.
 
 **Investissement modeste · équipes existantes · auto-financement des pivots.**
 
-### 3. 2 paris plateforme · 36 mois
+### 3. 2 paris plateforme · 36 mois · 100 % B2B
 
-- **Cabin Sense** → MOMENT devient éditeur d'intelligence cabine
-- **MOMENT Pass** → MOMENT devient opérateur de membership multi-carriers
+- **Cabin Sense** → MOMENT devient éditeur d'intelligence cabine (air + rail)
+- **MOMENT Network** → MOMENT devient la couche d'orchestration B2B multi-modale (aéroports + air + rail)
 
-**Si l'un fonctionne → plateforme. Si les deux → système d'exploitation du voyage aérien.**
+**Si l'un fonctionne → plateforme. Si les deux → système d'exploitation de la mobilité.**
 
 ### Vision condensée
 
-**MOMENT 2028 = opérateur de référence de l'expérience perçue dans le transport aérien.**
+**MOMENT 2028 = opérateur de référence de l'expérience perçue dans la mobilité (aéroports + air + rail).**
+
+**Modèle 100 % B2B** : aéroports paient AIRFREE · compagnies aériennes + ferroviaires paient CONNECT et MOOD · les paris plateforme (Cabin Sense + MOMENT Network) restent vendus aux mêmes opérateurs.
 
 - 9 personas → 100 % des typologies, 100 % de la valeur
 - 7/13 critères de différenciation perçue couverts
